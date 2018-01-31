@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Dashboard} from './components/dashboard';
+import Dashboard from './components/dashboard';
 import './index.css';
 
 
