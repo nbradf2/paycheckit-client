@@ -1,0 +1,30 @@
+form {
+	background-color: #F6F6FA;
+	color: #21434B;
+	text-align: center;
+	padding: 1rem;
+	vertical-align: middle;
+}
+
+input {
+	display: block;
+	margin: 0 auto;
+	height: 3rem;
+	background-color: #F6F6FA;
+	margin-bottom: 1rem;
+	border-bottom: 1px solid #21434B;
+}
+
+input::placeholder {
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+}
+
+button {
+	font-family: 'Lato', sans-serif;
+	height: 3rem;
+	color: #21434B;
+	background-color: #F6F6FA;
+	border: 1px solid #21434B;
+
+}
