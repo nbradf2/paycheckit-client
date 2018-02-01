@@ -1,22 +1,35 @@
+/***** GENERAL *****/
 body {
-	margin: 2rem;
-	background-color: #F6F6FA;
+	/*margin: 2rem;*/
+	background-color: #21434B;
+	color: #F6F6FA;
 	font-size: 1.5rem;
 }
 
 section {
 	min-height: 100vh;
-}
-
-section:first-child {
+	padding: 3rem;
 	text-align: center;
 }
 
 section:nth-child(2) {
-	background-color: #2D2D2E;
-	color: #F6F6FA;
+	background-color: #F6F6FA;
+	color: #21434B;
 }
 
-section.fa-angle-double-down {
-	font-size: 2rem;
+h2 {
+	text-align: center;
+	vertical-align: middle;
 }
+
+.title {
+	vertical-align: middle;
+}
+
+/***** FONT AWESOME *****/
+
+.font-awesome {
+	text-align: center;
+}
+
+
