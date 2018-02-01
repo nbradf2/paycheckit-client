@@ -1,0 +1,22 @@
+body {
+	margin: 2rem;
+	background-color: #F6F6FA;
+	font-size: 1.5rem;
+}
+
+section {
+	min-height: 100vh;
+}
+
+section:first-child {
+	text-align: center;
+}
+
+section:nth-child(2) {
+	background-color: #2D2D2E;
+	color: #F6F6FA;
+}
+
+section.fa-angle-double-down {
+	font-size: 2rem;
+}
