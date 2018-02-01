@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './footer'
 import '../normalize.css';
 import '../grid.css';
 import '../index.css';
@@ -31,6 +32,7 @@ export default function Dashboard(props) {
 			<section>
 				{/** LOGIN **/}
 			</section>
+			<Footer />
 		</div>
 	);
 }
