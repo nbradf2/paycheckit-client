@@ -1,9 +1,6 @@
 import React from 'react';
 import Footer from './footer'
 import LoginForm from './loginForm'
-import '../normalize.css';
-import '../grid.css';
-import '../index.css';
 import './landingPage.css';
 
 export default function LandingPage(props) {
@@ -25,8 +22,8 @@ export default function LandingPage(props) {
 				<p>Check it off!</p>
 				<i className="far fa-3x fa-check-square"></i>
 				<div className="font-awesome">			
-						<i className="fas fa-3x fa-angle-double-down" data-fa-transform="down-10"></i>
-					</div>
+					<i className="fas fa-3x fa-angle-double-down" data-fa-transform="down-10"></i>
+				</div>
 			</section>
 			<section>
 				<LoginForm />

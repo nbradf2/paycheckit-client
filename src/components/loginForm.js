@@ -1,7 +1,4 @@
 import React from 'react';
-import '../normalize.css';
-import '../grid.css';
-import '../index.css';
 import './loginForm.css';
 
 export default function LoginForm(props) {
