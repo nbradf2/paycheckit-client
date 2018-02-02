@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Dashboard from './components/dashboard';
+import LandingPage from './components/landingPage';
 import './index.css';
 
 
-ReactDOM.render(<Dashboard />, document.getElementById('root'));
+ReactDOM.render(<LandingPage />, document.getElementById('root'));
 
