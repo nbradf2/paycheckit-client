@@ -4,9 +4,9 @@ import LoginForm from './loginForm'
 import '../normalize.css';
 import '../grid.css';
 import '../index.css';
-import './dashboard.css';
+import './landingPage.css';
 
-export default function Dashboard(props) {
+export default function LandingPage(props) {
 	return (
 		<div>
 			{/** NAV BAR **/}
@@ -18,16 +18,14 @@ export default function Dashboard(props) {
 				<i className="fas fa-3x fa-angle-double-down" data-fa-transform="down-60"></i>
 			</section>
 			<section>
-				<h2>Plan your income and payments in advance with Paycheckit.</h2>
-					<div className="font-awesome">			
-						<i className="fas fa-4x fa-tasks"></i>
-					</div>
-				<p>Got paid? <i className="far fa-2x fa-money-bill-alt"></i></p>
-				<p><i className="fas fa-2x fa-credit-card"></i> Paid a bill?</p>
+				<h2>Plan your income and payments in advance with Paycheckit.</h2>		
+				<i className="fas fa-5x fa-tasks"></i>
+				<p class="left-side">Got paid? <i className="far fa-2x fa-money-bill-alt"></i></p>
+				<p class="right-side"><i className="fas fa-2x fa-credit-card"></i> Paid a bill?</p>
 				<p>Check it off!</p>
 				<i className="far fa-3x fa-check-square"></i>
 				<div className="font-awesome">			
-						<i className="fas fa-3x fa-angle-double-down" data-fa-transform="down-20"></i>
+						<i className="fas fa-3x fa-angle-double-down" data-fa-transform="down-10"></i>
 					</div>
 			</section>
 			<section>

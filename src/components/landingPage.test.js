@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import Dashboard from './dashboard';
+import LandingPage from './landingPage';
 
-describe('<Dashboard />', () => {
+describe('<LandingPage />', () => {
 	it('Renders without crashing', () => {
-		shallow(<Dashboard />);
+		shallow(<LandingPage />);
 	})
 })

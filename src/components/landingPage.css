@@ -26,10 +26,16 @@ h2 {
 	vertical-align: middle;
 }
 
-/***** FONT AWESOME *****/
-
-.font-awesome {
-	text-align: center;
+.left-side {
+	text-align: left;
+	font-size: 2.5rem;
 }
+
+.right-side {
+	text-align: right;
+	font-size: 2.5rem;
+}
+
+
 
 
