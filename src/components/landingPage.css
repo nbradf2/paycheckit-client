@@ -2,7 +2,6 @@
 body {
 	/*margin: 2rem;*/
 	background-color: #21434B;
-	color: #F6F6FA;
 	font-size: 1.5rem;
 }
 
@@ -24,6 +23,7 @@ h2 {
 
 .title {
 	vertical-align: middle;
+	color: #F6F6FA;
 }
 
 .left-side {
@@ -35,6 +35,7 @@ h2 {
 	text-align: right;
 	font-size: 2.5rem;
 }
+
 
 
 
