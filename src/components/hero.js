@@ -1,0 +1,12 @@
+import React from 'react';
+import './hero.css';
+
+export default function Hero(props) {
+	return(
+		<div className="title">
+			<h1>Paycheck<span>It</span></h1>
+			<p>Because living paycheck to paycheck doesn't have to be so hard.</p>
+			{/*<i className="fas fa-3x fa-angle-double-down" data-fa-transform="down-60"></i>*/}
+		</div>
+	);
+}
