@@ -3,6 +3,7 @@ import Hero from './hero';
 import About from './about';
 import Footer from './footer'
 import LoginForm from './loginForm';
+import Register from './register';
 import NavBarPublic from './navBarPublic';
 import UserHome from './userHome';
 import './landingPage.css';
@@ -13,7 +14,7 @@ export default function LandingPage(props) {
 		href: '#about'
 	}, {
 		text: 'Login',
-		href: '#'
+		href: '#loginForm'
 	}, {
 		text: 'Register',
 		href: '#'
@@ -25,6 +26,7 @@ export default function LandingPage(props) {
 			<Hero />
 			<About />
 			<LoginForm />
+			<Register />
 			<UserHome />
 			<Footer />
 		</div>

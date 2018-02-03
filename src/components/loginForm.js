@@ -8,7 +8,7 @@ import './loginForm.css';
 
 export default function LoginForm(props) {
 	return(
-		<form>
+		<form id="loginForm">
 			<h2>Log In</h2>
 			<div className="input">
 				<label htmlFor="username" hidden>Username</label>

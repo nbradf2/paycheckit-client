@@ -3,7 +3,7 @@ import './about.css'
 
 export default function About(props) {
 	return(
-		<div className="about">
+		<div id="about">
 			<h2>Plan your income and payments in advance with Paycheckit.</h2>		
 			<i className="fas fa-5x fa-tasks"></i>
 			<p className="left-side">Got paid? <i className="far fa-2x fa-money-bill-alt"></i></p>
