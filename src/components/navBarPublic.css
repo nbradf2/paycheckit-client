@@ -1,0 +1,15 @@
+div {
+	background-color: #F6F6FA;
+	color: #21434B;
+}
+
+h1 {
+	display: inline-block;
+	text-align: left;
+}
+
+li {
+	display: inline-block; 
+	text-decoration: none;
+	text-align: right;
+}
