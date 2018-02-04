@@ -6,3 +6,11 @@ body {
   font-size: 18px;
 /*  color: #21434B;*/
 }
+
+ul {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+}
