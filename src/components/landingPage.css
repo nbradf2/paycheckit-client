@@ -1,12 +1,12 @@
-/***** GENERAL *****/
+/***** GENERAL ****
 body {
-	/*margin: 2rem;*/
+	margin: 2rem;
 	background-color: #21434B;
 	font-size: 1.5rem;
 }
 
 section {
-	/*min-height: 100vh;*/
+	min-height: 100vh;
 	padding: 3rem;
 	text-align: center;
 }
@@ -40,3 +40,4 @@ h2 {
 
 
 
+*/

@@ -1,6 +1,4 @@
 import React from 'react';
-import '../normalize.css';
-import '../index.css';
 import './navBarPublic.css';
 
 export default function NavBarPublic(props) {

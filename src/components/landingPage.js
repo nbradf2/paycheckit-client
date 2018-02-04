@@ -1,11 +1,12 @@
 import React from 'react';
+import NavBarPublic from './navBarPublic';
 import Hero from './hero';
 import About from './about';
 import Footer from './footer'
 import LoginForm from './loginForm';
 import Register from './register';
-import NavBarPublic from './navBarPublic';
 import UserHome from './userHome';
+import BudgetBoard from './budgetBoard';
 import './landingPage.css';
 
 export default function LandingPage(props) {
@@ -28,6 +29,7 @@ export default function LandingPage(props) {
 			<LoginForm />
 			<Register />
 			<UserHome />
+			<BudgetBoard />
 			<Footer />
 		</div>
 	);

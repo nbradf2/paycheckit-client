@@ -1,6 +1,4 @@
 import React from 'react';
-import '../normalize.css';
-import '../index.css';
 import './userHome.css';
 
 export default function UserHome(props) {
