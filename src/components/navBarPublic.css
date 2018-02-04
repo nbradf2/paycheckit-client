@@ -1,15 +1,22 @@
-/*div {
+.nav-bar-public {
+	padding: 1rem;
 	background-color: #F6F6FA;
 	color: #21434B;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
-h1 {
-	display: inline-block;
-	text-align: left;
+#title {
+	display: inline;
 }
 
-li {
-	display: inline-block; 
-	text-decoration: none;
+.nav-public {
+	display: inline;
 	text-align: right;
-}*/
+}
+
+.nav-links {
+	display: inline;
+	margin: 2rem 1rem;
+}
