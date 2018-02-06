@@ -1,4 +1,9 @@
-/*.title {
+.title {
 	background-color: #21434B;
+	color: #F6F6FA;
 	font-size: 1.5rem;
-}*/
+	height: 100vh;
+	padding-top: 23rem;
+	text-align: center;
+}
+

@@ -1,0 +1,11 @@
+#about {
+	padding-top: 4rem;
+	min-height: 100vh;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+#about p {
+	font-size: 2rem;
+	margin: 3rem 0;
+}
