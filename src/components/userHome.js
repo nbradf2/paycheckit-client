@@ -11,9 +11,9 @@ export default function UserHome(props) {
 		href: '#addBudget'
 	}]
 	return (
-		<div>
+		<div className="userHome">
 			<NavBarUser title="PaycheckIt" links={links}/>
-			<h1>Hello</h1>
+			<h2>My Budgets</h2>
 		</div>
 	);
 }

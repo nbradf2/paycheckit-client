@@ -3,6 +3,8 @@ import './budgetTemplateList.css';
 
 export default function BudgetTemplateList(props) {
 	return(
-		<h1>What up</h1>
+		<div>
+			<h3>Budget List</h3>
+		</div>
 	);
 }
