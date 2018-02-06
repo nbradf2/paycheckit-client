@@ -6,7 +6,6 @@ import Footer from './footer'
 import LoginForm from './loginForm';
 import Register from './register';
 import UserHome from './userHome';
-import BudgetBoard from './budgetBoard';
 import './landingPage.css';
 
 export default function LandingPage(props) {
@@ -29,7 +28,6 @@ export default function LandingPage(props) {
 			<LoginForm />
 			<Register />
 			<UserHome />
-			<BudgetBoard />
 			<Footer />
 		</div>
 	);
