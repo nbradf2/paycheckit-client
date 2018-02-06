@@ -1,0 +1,35 @@
+#registerForm {
+	text-align: center;
+	background-color: #F6F6FA;
+	height: 100vh;
+	margin-top: -1.4rem;
+	padding-top: 5rem;
+	color: #21434B;
+}
+
+#registerForm input {
+	background-color: #F6F6FA;
+	color: #21434B;
+	font-family: 'Lato', sans-serif; 
+	height: 4rem;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #21434B;
+	padding-top: 1.5rem;
+	text-align: center;
+}
+
+#registerForm input::placeholder {
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	color: #21434B;
+}
+
+#registerForm button {
+	font-family: 'Lato', sans-serif;
+	height: 3rem;
+	color: #F6F6FA;
+	background-color: #21434B;
+	border: 1px solid #F6F6FA;
+	width: 15rem;
+}
