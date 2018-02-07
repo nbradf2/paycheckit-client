@@ -1,11 +1,11 @@
 import React from 'react';
-import BudgetTemplateList from './budgetTemplateList';
+import BudgetList from './budgetList';
 import './budgetBoard.css';
 
 export default function BudgetBoard(props) {
 	return(
 		<div>
-			<BudgetTemplateList />
+			<BudgetList />
 		</div>
 	);
 }
