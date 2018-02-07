@@ -1,4 +1,36 @@
+/*ORIGINAL CSS*/
+
 .nav-bar-public {
+	padding: 1rem;
+	background-color: #F6F6FA;
+	color: #21434B;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.nav-public {
+	margin-top: 1rem;
+	text-align: right;
+}
+
+@media only screen and (max-width: 843px) {
+	.nav-bar-public {
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.nav-public {
+		/*margin-top: 1rem;*/
+		text-align: center;
+		border-top: 1px solid #21434B;
+	}
+}
+
+/*HAMBURGER SLIDE IN RIGHT*/
+
+/*.nav-bar-public {
 	margin: 0;
 	padding: 0;
 	color: #21434B;
@@ -79,6 +111,7 @@
 #menu {
 	position: absolute;
 	width: 1600px;
+	overflow: hidden;
 	margin: -100px 0 0 0;
 	padding: 30px;
 	margin-top: 25px;
@@ -100,27 +133,11 @@
 #menuToggle input:checked ~ ul {
 	transform: scale(1.0, 1.0);
 	opacity: 1;
-}
-
-/*.nav-bar-public {
-	padding: 1rem;
-	background-color: #F6F6FA;
-	color: #21434B;
-	position: absolute;
-	top: 0;
-	width: 100%;
-}
-
-.nav-public {
-	margin-top: 1rem;
-	text-align: right;
-}
-
-.nav-links {
-	display: inline;
 }*/
 
-/***** HAMBURGER MENU *****/
+
+
+
 
 
 

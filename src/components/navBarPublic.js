@@ -13,13 +13,7 @@ export default function NavBarPublic(props) {
 		<div className="nav-bar-public row">
 			<h1 className="col-6" id="title">{props.title}</h1>
 			<nav className="nav-public col-6">
-				<div id="menuToggle">
-					<input type="checkbox" />
-					<span></span>
-					<span></span>
-					<span></span>
-					<ul id="menu">{links}</ul>
-				</div>
+				<ul id="menu">{links}</ul>
 			</nav>
 		</div>
 	);
