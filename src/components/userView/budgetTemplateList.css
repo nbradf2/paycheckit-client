@@ -1,0 +1,24 @@
+.budgetTable {
+	color: #21434B;
+	text-align: center;
+}
+
+.balance {
+	color: blue;
+}
+
+.credit {
+	color: green;
+}
+
+.debit {
+	color: red;
+}
+
+.debitUtility {
+	color: orange;
+}
+
+.moneySpent {
+	color: hotPink;
+}
