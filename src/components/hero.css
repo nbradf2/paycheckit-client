@@ -1,4 +1,4 @@
-.title {
+#hero {
 	background-color: #21434B;
 	color: #F6F6FA;
 	font-size: 1.5rem;
@@ -7,7 +7,7 @@
 	text-align: center;
 }
 
-.fa-angle-double-down {
+#hero .fa-angle-double-down {
 	margin-top: 8rem;
 	font-size: 4rem;
 }

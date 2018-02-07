@@ -10,3 +10,27 @@
 	font-size: 2rem;
 	margin: 3rem 0;
 }
+
+#about .fa {
+	font-size: 4rem;
+	margin: 2rem;
+} 
+
+.fa-check-square {
+	display: block;
+}
+
+@media only screen and (max-width: 843px) {
+	#about {
+		padding-top: 2rem;
+	}
+
+	#about p {
+		margin-bottom: 1rem;
+	}
+
+	#about .fa {
+		margin: 0.5rem;
+		display: block;
+	} 	
+}
