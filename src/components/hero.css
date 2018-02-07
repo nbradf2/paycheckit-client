@@ -2,8 +2,12 @@
 	background-color: #21434B;
 	color: #F6F6FA;
 	font-size: 1.5rem;
-	height: 100vh;
+	min-height: 100vh;
 	padding-top: 23rem;
 	text-align: center;
 }
 
+.fa-angle-double-down {
+	margin-top: 10rem;
+	font-size: 4rem;
+}
