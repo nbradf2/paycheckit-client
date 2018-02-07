@@ -17,7 +17,7 @@ export default function LandingPage(props) {
 		href: '#loginForm'
 	}, {
 		text: 'Register',
-		href: '#'
+		href: '#registerForm'
 	}]
 
 	return (

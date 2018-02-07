@@ -12,7 +12,7 @@ export default function LoginForm(props) {
 				<input type="text" name="password" id="password" placeholder="Password"/>
 			</div>
 			<button type="submit">Submit</button>
-			<p>Not a registered user?  Click <a href=".input">here</a>!</p>
+			<p>Not a registered user?  Click <a href="#registerForm">here</a>!</p>
 		</form>
 	);
 } 

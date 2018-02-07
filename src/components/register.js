@@ -18,6 +18,7 @@ export default function Register(props) {
 				<input type="text" name="repeatPassword" id="repeatPassword" placeholder="Repeat Password"/>
 			</div>
 			<button type="submit">Submit</button>
+			<p>Already have an account?  Click <a href="#loginForm">here</a>!</p>
 		</form>
 	);
 }
