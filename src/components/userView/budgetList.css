@@ -2,11 +2,17 @@
 	background-color: #F6F6FA;
 	color: #21434B;
 	margin-left: 1.5rem;
+	margin-right: 1.5rem; 
 	border-radius:3px;
 }
 
 .budgetTable h3 {
 	margin-left: 1.5rem;
+}
+
+.checkbox {
+	height: 5rem;
+	width: 5rem;
 }
 
 .line {
@@ -18,4 +24,13 @@
 	display: inline-block;
 	margin-left: 0.5rem;
 	margin-right: 0.5rem;
+}
+
+#addNewBudget {
+	background-color: #21434B;
+	color: #F6F6FA;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 1rem;
+	width: 100%;
+	cursor: pointer;
 }

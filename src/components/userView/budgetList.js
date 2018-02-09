@@ -6,21 +6,25 @@ export default function BudgetList(props) {
 
 	let budget = [
 		{
+			checked: false,
 			date: '02/02/18',
 			amount: 1000,
 			label: 'Paycheck'
 		},
 		{
+			checked: false,
 			date: '02/10/18',
 			amount: 400,
 			label: 'Savings'
 		},
 		{
+			checked: false,
 			date: '02/10/18',
 			amount: -75,
 			label: 'MasterCard'
 		},
 		{
+			checked: false,
 			date: '02/02/18',
 			amount: -105,
 			label: 'Verizon'
@@ -30,6 +34,8 @@ export default function BudgetList(props) {
 	let rows = budget.map(function(line, index) {
 		return (
 			<div className="line">
+				<input type="checkbox" id="checkbox"/>
+				<label for="checkbox" hidden></label>
 				<p className="item">{line.date}</p>
 				<p className="item">{line.amount}</p>
 				<p className="item">{line.label}</p>
@@ -41,6 +47,7 @@ export default function BudgetList(props) {
 		<div className="budgetTable col-4">
 			<h3>{date}</h3>
 			<div>{rows}</div>
+			<button id="addNewBudget">Add New Budget</button>
 		</div>
 	);
 }
