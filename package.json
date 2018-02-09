@@ -16,6 +16,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "enzyme": "^3.3.0"
+    "enzyme": "^3.3.0",
+    "react-table": "^6.7.6"
   }
 }

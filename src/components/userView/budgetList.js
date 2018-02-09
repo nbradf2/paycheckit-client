@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactTable from 'react';
 import './budgetList.css';
 
 export default function BudgetList(props) {
@@ -26,21 +27,23 @@ export default function BudgetList(props) {
 	];
 
 	let rows = budget.map(function(line, index) {
+		let date = line.date;
+		let amount = line.amount;
+		let label = line.label;
+
 		return (
-			<tr>
-				<td>{line.date}</td>
-				<td>{line.amount}</td>
-				<td>{line.label}</td>
-			</tr>
+			<div className="line">
+				<p className="item">{line.date}</p>
+				<p className="item">{line.amount}</p>
+				<p className="item">{line.label}</p>
+			</div>
 		)
-	})
+	});
 
 	return(
-		<div className="budgetTable">
-			<table>
-				<th>02/02/18 - 02/15/18</th>
-				<tbody>{rows}</tbody>
-			</table>
+		<div className="budgetTable col-4">
+			<h3>January 2018</h3>
+			<div>{rows}</div>
 		</div>
 	);
 }

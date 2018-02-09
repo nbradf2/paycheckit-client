@@ -1,24 +1,21 @@
 .budgetTable {
+	background-color: #F6F6FA;
 	color: #21434B;
-	text-align: center;
+	margin-left: 1.5rem;
+	border-radius:3px;
 }
 
-.balance {
-	color: blue;
+.budgetTable h3 {
+	margin-left: 1.5rem;
 }
 
-.credit {
-	color: green;
+.line {
+	display: block;
+	margin-left: 1rem;
 }
 
-.debit {
-	color: red;
-}
-
-.debitUtility {
-	color: orange;
-}
-
-.moneySpent {
-	color: hotPink;
+.item {
+	display: inline-block;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }
