@@ -4,7 +4,7 @@ import './budgetBoard.css';
 
 export default function BudgetBoard(props) {
 	return(
-		<div>
+		<div id="budgetBoard">
 			<BudgetList />
 		</div>
 	);

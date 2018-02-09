@@ -44,10 +44,18 @@ export default function BudgetList(props) {
 	});
 
 	return(
+		// Turn into BudgetCard component
+		// will pull from the current list - mapStateToProps(array of budgets)
+		// will iterate over an array of BudgetCards
+		// get data group by month through mongo
 		<div className="budgetTable col-4">
+			{/*starting balance*/}
+			{/*income balance*/}
+			{/*ending balance*/}
 			<h3>{date}</h3>
 			<div>{rows}</div>
 			<button id="addNewBudget">Add New Budget</button>
+			{/*Show detail button on top right of card*/}
 		</div>
 	);
 }
