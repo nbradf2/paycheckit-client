@@ -22,13 +22,13 @@ export default function LandingPage(props) {
 
 	return (
 		<div>
-			<NavBarPublic title="PaycheckIt" links={links} />
-			<Hero />
-			<About />
-			<LoginForm />
-			<Register />
-			<UserHome />
-			<Footer />
+				<NavBarPublic title="PaycheckIt" links={links} />
+				<Hero />
+				<About />
+				<LoginForm />
+				<Register />
+				<UserHome />
+				<Footer />
 		</div>
 	);
 }
