@@ -49,7 +49,7 @@ export default function BudgetCard(props) {
 		// will pull from the current list - mapStateToProps(array of budgets)
 		// will iterate over an array of BudgetCards
 		// get data group by month through mongo
-		<div className="budgetTable col-4">
+		<div className="budgetTable col-6">
 			{/*starting balance*/}
 			{/*income balance*/}
 			{/*ending balance*/}
