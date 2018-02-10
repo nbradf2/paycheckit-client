@@ -1,9 +1,9 @@
 import React from 'react';
-import './addBudgetForm.css';
+import './budgetFullView.css';
 
 // RENAME THIS THE BudgetFullView
 
-// current budget will be a state property
+// current budget will be a state, property
 // is an object with array of income and expenses
 // if no records, will only see headers and add button
 // set up construct of consistent line items that can carry 
@@ -32,7 +32,7 @@ import './addBudgetForm.css';
 // budget will have some context of all monthly records
 // budget will have some contect of the current budget
 
-export default function AddBudgetForm(props) {
+export default function BudgetFullView(props) {
 	return(
 		<p>text</p>
 	);
