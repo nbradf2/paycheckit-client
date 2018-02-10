@@ -9,14 +9,19 @@
 	margin-left: 1.5rem;
 }
 
-.checkbox {
-	height: 5rem;
-	width: 5rem;
+#addCard input {
+	
 }
 
 .line {
 	display: block;
 	margin-left: 1rem;
+}
+
+.line input {
+	height: 1.2rem;
+	width: 1.2rem;
+	text-align: left;
 }
 
 .item {
