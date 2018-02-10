@@ -6,7 +6,7 @@ export default function Hero(props) {
 		<div className="row" id="hero">
 			<h1>Paycheck<span>It</span></h1>
 			<p>Because living paycheck to paycheck doesn't have to be so hard.</p>
-			<i className="fa fa-angle-double-down"></i>
+			<a href="#about"><i className="fa fa-angle-double-down"></i></a>
 		</div>
 	);
 }

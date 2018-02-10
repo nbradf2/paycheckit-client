@@ -3,7 +3,7 @@ import './budgetCard.css';
 
 export default function BudgetCard(props) {
 	let date = 'January 2018';
-
+	let startingBalance = 1000;
 	let budget = [
 		{
 			checked: false,
@@ -31,6 +31,8 @@ export default function BudgetCard(props) {
 		},
 	];
 
+	let incomeBalance = startingBalance + budget.amount;
+
 	let rows = budget.map(function(line, index) {
 		return (
 			<div className="line">
@@ -52,7 +54,9 @@ export default function BudgetCard(props) {
 			{/*income balance*/}
 			{/*ending balance*/}
 			<h3>{date}</h3>
+			<h3>{startingBalance}</h3>
 			<div>{rows}</div>
+			<div>{incomeBalance}</div>
 			<button id="addNewBudget">Add New Budget</button>
 			{/*Show detail button on top right of card*/}
 		</div>

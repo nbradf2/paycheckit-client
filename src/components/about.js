@@ -10,7 +10,7 @@ export default function About(props) {
 			<p className="col-6">Got paid? <i className="fa fa-money"></i></p>
 			<p className="col-6">Paid a bill? <i className="fa fa-credit-card"></i></p>
 			<p className="col-12">Check it off!<i className="fa fa-check-square"></i></p>	
-			<i className="fa fa-angle-double-down" data-fa-transform="down-10"></i>
+			<a href="#loginForm"><i className="fa fa-angle-double-down" data-fa-transform="down-10"></i></a>
 		</div>
 	);
 }
