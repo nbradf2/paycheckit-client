@@ -1,41 +1,14 @@
 import React from 'react';
+import {connect} from 'react-redux'
 import './budgetCard.css';
 
-export default function BudgetCard(props) {
-	let date = 'January 2018';
-	let startingBalance = 1000;
-	let budget = [
-		{
-			checked: false,
-			date: '02/02/18',
-			amount: 1000,
-			label: 'Paycheck'
-		},
-		{
-			checked: false,
-			date: '02/10/18',
-			amount: 400,
-			label: 'Savings'
-		},
-		{
-			checked: false,
-			date: '02/10/18',
-			amount: -75,
-			label: 'MasterCard'
-		},
-		{
-			checked: false,
-			date: '02/02/18',
-			amount: -105,
-			label: 'Verizon'
-		},
-	];
-
-	let rows = budget.map(function(line, index) {
+function BudgetCard(props) {
+	
+	let rows = props.budget.map(function(line, index) {
 		return (
-			<div className="line">
+			<div className="line" key={index}>
 				<input type="checkbox" id="checkbox"/>
-				<label for="checkbox" hidden></label>
+				<label htmlFor="checkbox" hidden></label>
 				<p className="item">{line.date}</p>
 				<p className="item">{line.amount}</p>
 				<p className="item">{line.label}</p>
@@ -53,11 +26,19 @@ export default function BudgetCard(props) {
 			{/*starting balance*/}
 			{/*income balance*/}
 			{/*ending balance*/}
-			<h3>{date}</h3>
-			<h3>{startingBalance}</h3>
+			<h3>{props.date}</h3>
+			<h3>{props.startingBalance}</h3>
 			<div>{rows}</div>
 			<button id="addNewBudget">Add New Budget</button>
 			{/*Show detail button on top right of card*/}
 		</div>
 	);
 }
+
+const mapStateToProps = state => ({
+	date: state.date,
+	startingBalance: state.startingBalance,
+	budget: state.budget
+})
+
+export default connect(mapStateToProps)(BudgetCard)
