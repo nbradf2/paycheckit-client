@@ -14,24 +14,24 @@ export default function AddCardForm(props) {
 				<input type="text" name="itemLabel" id="itemLabel" placeholder="Label"/>
 				<div className="paymentType">
 					<h4 className="income">Income</h4>
-					<input type="checkbox" name="paycheck" id="paycheck" />
+					<input type="radio" name="type" id="paycheck" />
 					<label htmlFor="paycheck">Paycheck</label>
-					<input type="checkbox" name="addSavings" id="addSavings" />
+					<input type="radio" name="type" id="addSavings" />
 					<label htmlFor="addSavings">Savings</label>
-					<input type="checkbox" name="addOther" id="addOther" />
+					<input type="radio" name="type" id="addOther" />
 					<label htmlFor="addOther">Other</label>
 					<h4 className="payment">Payment</h4>
-					<input type="checkbox" name="credtCard" id="creditCard"/>
+					<input type="radio" name="type" id="creditCard"/>
 					<label htmlFor="creditCard">Credit Card</label>
-					<input type="checkbox" name="minusSavings" id="minusSavings"/>
+					<input type="radio" name="type" id="minusSavings"/>
 					<label htmlFor="minusSavings">Savings</label>
-					<input type="checkbox" name="loan" id="loan" />
+					<input type="radio" name="type" id="loan" />
 					<label htmlFor="loan">Loan</label>
-					<input type="checkbox" name="utility" id="utility" />
+					<input type="radio" name="type" id="utility" />
 					<label htmlFor="utility">Utility</label>
-					<input type="checkbox" name="personal" id="personal"/>
+					<input type="radio" name="type" id="personal"/>
 					<label htmlFor="personal">Personal</label>
-					<input type="checkbox" name="minusOther" id="minusOther"/>
+					<input type="radio" name="type" id="minusOther"/>
 					<label htmlFor="minusOther">Other</label>
 				</div>
 				<button type="submit">Add Item</button>

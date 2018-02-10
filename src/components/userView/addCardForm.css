@@ -18,7 +18,7 @@
 	text-align: center;
 }
 
-#addCard input[type="checkbox"] {
+#addCard input[type="radio"] {
 	display: inline;
 	height: 1.2rem;
 	width: 1.2rem;
