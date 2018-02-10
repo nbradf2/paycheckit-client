@@ -1,8 +1,7 @@
 #addCard {
 	text-align: center;
 	background-color: #F6F6FA;
-	height: 100vh;
-	margin-top: -1.4rem;
+	width: 100%;
 	padding-top: 5rem;
 	color: #21434B;
 }
@@ -21,8 +20,10 @@
 
 #addCard input[type="checkbox"] {
 	display: inline;
-	height: 2rem;
+	height: 1.2rem;
+	width: 1.2rem;
 	text-align: left;
+	margin: 1rem;
 }
 
 #addCard input::placeholder {
@@ -39,4 +40,11 @@
 	background-color: #21434B;
 	border: 1px solid #F6F6FA;
 	width: 15rem;
+}
+
+.income,
+.payment {
+	padding: 1rem;
+	background-color: #21434B;
+	color: #F6F6FA;
 }
