@@ -39,6 +39,8 @@ export default function BudgetCard(props) {
 				<p className="item">{line.date}</p>
 				<p className="item">{line.amount}</p>
 				<p className="item">{line.label}</p>
+				<p className="item"><i className="fa fa-pencil"></i></p>
+				<p className="item"><i className="fa fa-trash-o"></i></p>
 			</div>
 		)
 	});
