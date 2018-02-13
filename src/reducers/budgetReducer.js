@@ -1,6 +1,8 @@
 const initialState = {
-	date: 'January 2018',
+	month: 'January 2018',
+	income: 2000,
 	startingBalance: 1000,
+	endingBalance: 3000,
 	budget: [
 		{
 			checked: false,
