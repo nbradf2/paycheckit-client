@@ -1,9 +1,11 @@
+import * as actions from '../actions/budgetActions';
+
 const initialState = {
 	month: 'January 2018',
 	income: 2000,
 	startingBalance: 1000,
 	endingBalance: 3000,
-	budget: [
+	lineItems: [
 		{
 			checked: false,
 			date: '02/02/18',

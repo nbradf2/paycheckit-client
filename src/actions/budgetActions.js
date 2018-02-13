@@ -5,7 +5,10 @@ export const addBudgetList = month => ({
 });
 
 export const ADD_BUDGETCARD = 'ADD_BUDGETCARD';
-export const addBudgetCard = (text, listIndex) => ({
+export const addBudgetCard = (startingBalance, income, lineItems, endingBalance, listIndex) => ({
 	type: ADD_BUDGETCARD,
-	text
+	startingBalance,
+	income,
+	lineItems,
+	endingBalance,
 });
