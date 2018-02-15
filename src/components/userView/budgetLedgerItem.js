@@ -1,8 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import './budgetCard.css';
+import './budgetLedgerItem.css';
 
-export default function BudgetCard(props) {
+export default function BudgetLedgerItem(props) {
 	return (
 		<div>
 			{props.month}
@@ -14,7 +14,7 @@ export default function BudgetCard(props) {
 	)
 }
 
-BudgetCard.defaultProps = {
+BudgetLedgerItem.defaultProps = {
 	month: '',
 	startingBalance: '',
 	income: '',

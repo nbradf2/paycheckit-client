@@ -1,11 +1,11 @@
 import React from 'react';
-import BudgetCard from './budgetCard'
+import BudgetLedgerItem from './budgetLedgerItem'
 import './budgetList.css';
 
 export default function BudgetList(props) {
 	return(
 		<div>
-			<BudgetCard />
+			<BudgetLedgerItem />
 		</div>
 	);
 }
