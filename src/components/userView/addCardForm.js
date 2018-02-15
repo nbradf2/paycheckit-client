@@ -34,7 +34,7 @@ export default class AddCardForm extends React.Component {
 			return (
 				<div className="add-button"
 				onClick={() => this.setEditing(true)}>
-					<a href="#addCard">Add {this.props.type}</a>
+					<button href="#addCard">Add {this.props.type}</button>
 				</div>
 			)
 		}
