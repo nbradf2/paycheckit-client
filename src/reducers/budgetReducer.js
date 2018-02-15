@@ -1,77 +1,55 @@
 import * as actions from '../actions/budgetActions';
 
 const initialState = {
-	budgetList: [{
-		month: 'January 2018',
-		income: 2000,
-		startingBalance: 1000,
-		endingBalance: 3000,
-		lineItems: [
-			{
-				checked: false,
-				date: '02/02/18',
-				amount: 1000,
-				label: 'Paycheck'
-			},
-			{
-				checked: false,
-				date: '02/10/18',
-				amount: 400,
-				label: 'Savings'
-			},
-			{
-				checked: false,
-				date: '02/10/18',
-				amount: -75,
-				label: 'MasterCard'
-			},
-			{
-				checked: false,
-				date: '02/02/18',
-				amount: -105,
-				label: 'Verizon'
-			}
-		]
-	}, {
-		month: 'February 2018',
-		income: 3000,
-		startingBalance: 900,
-		endingBalance: 3000,
-		lineItems: [
-			{
-				checked: false,
-				date: '02/02/18',
-				amount: 1000,
-				label: 'Paycheck'
-			},
-			{
-				checked: false,
-				date: '02/10/18',
-				amount: 400,
-				label: 'Savings'
-			},
-			{
-				checked: false,
-				date: '02/10/18',
-				amount: -75,
-				label: 'MasterCard'
-			},
-			{
-				checked: false,
-				date: '02/02/18',
-				amount: -105,
-				label: 'Verizon'
-			}
-		]
-	}]
+	ledger: [
+		{
+			id: '001',
+			checked: false,
+			date: '02/02/18',
+			amount: 1000,
+			label: 'Paycheck'
+		},
+		{
+			id: '002',
+			checked: false,
+			date: '02/10/18',
+			amount: -400,
+			label: 'Rent'
+		},
+		{
+			id: '003',
+			checked: false,
+			date: '02/10/18',
+			amount: -75,
+			label: 'MasterCard'
+		},
+		{
+			id: '004',
+			checked: false,
+			date: '02/02/18',
+			amount: -105,
+			label: 'Verizon'
+		}
+	],
+
+	budgetList: [
+		{
+			month: 1,
+			year: 2018,
+			startingBalance: 1000,
+			income: 2000,
+			expenses: 500,
+			endingBalance: 3000
+		}
+	]
 };
 
 export default function budgetReducer(state=initialState, action) {
 	if (action.type === actions.ADD_BUDGETLIST) {
 		return Object.assign({}, state, {
-			budgetList: [...state.lists, {
+			budgetList: [...state.budgetList, {
 				month: action.month,
-				lineItems: []
+				startingBalance: action.startingBalance
 			}]
 		});
 	}
@@ -82,6 +60,7 @@ export default function budgetReducer(state=initialState, action) {
 			}
 			return Object.assign({}, budgetList, {
 				lineItems: [...budgetList.lineItems, {
+					budget: 'January 2018',
 					checked: action.checked,
 					date: action.date,
 					amount: action.amount,

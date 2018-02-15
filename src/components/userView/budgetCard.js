@@ -5,18 +5,19 @@ import './budgetCard.css';
 export default function BudgetCard(props) {
 	return (
 		<div>
-			{props.checked}
-			{props.date}
-			{props.amount}
-			{props.label}
+			{props.month}
+			{props.startingBalance}
+			{props.income}
+			{props.expenses}
+			{props.endingBalance}
 		</div>
 	)
-	
 }
 
 BudgetCard.defaultProps = {
-	checked: '',
-	date: '',
-	amount: '',
-	label: ''
+	month: '',
+	startingBalance: '',
+	income: '',
+	expenses: '',
+	endingBalance: ''
 }

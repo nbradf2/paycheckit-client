@@ -13,11 +13,14 @@ export default class AddCardForm extends React.Component {
 
 	onSubmit(event) {
 		event.preventDefault();
-		const text = this.textInput.value.trim();
-		if (text && this.props.onAdd) {
-			this.props.onAdd(this.textInput.value);
-		}
-		this.textInput.value = '';
+		const date = this.itemDate.value;
+		const amount = this.itemAmount.value;
+		const label = this.itemLabel.value;
+		this.itemDate.value = '';
+		this.itemAmount.value = 0;
+		this.itemLabel.value = '';
+		console.log(date, amount, label)
+		{/*ADD DISPATCH HERE TO DATABASE*/}
 	}
 
 	setEditing(editing) {
@@ -41,11 +44,11 @@ export default class AddCardForm extends React.Component {
 				<div className="input col-9">
 					<h2>Add Item</h2>
 					<label htmlFor="itemDate" hidden>itemDate</label>
-					<input type="text" name="itemDate" id="itemDate" placeholder="Date"/>
+					<input type="date" name="itemDate" id="itemDate" ref={input => this.itemDate=input} placeholder="Date"/>
 					<label htmlFor="itemAmount" hidden>Item Amount</label>
-					<input type="text" name="itemAmount" id="itemAmount" placeholder="Amount"/>
+					<input type="number" name="itemAmount" id="itemAmount" ref={input => this.itemAmount=input} placeholder="Amount"/>
 					<label htmlFor="itemLabel" hidden>Item Label</label>
-					<input type="text" name="itemLabel" id="itemLabel" placeholder="Label"/>
+					<input type="text" name="itemLabel" id="itemLabel" ref={input => this.itemLabel=input} placeholder="Label"/>
 					<div className="paymentType">
 						<h4 className="income">Income</h4>
 						<input type="radio" name="type" id="paycheck" />
