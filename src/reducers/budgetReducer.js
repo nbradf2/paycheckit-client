@@ -86,7 +86,7 @@ export default function budgetReducer(state=initialState, action) {
 			}]
 		});
 	}
-	else if (action.type === actions.ADD_LEDGERENTRY) {
+	else if (action.type === actions.ADD_LEDGER_ENTRY) {
 		let budgets = state.budgets.map((budget, index) => {
 			if (index !== action.budgetIndex) {
 				return budget;

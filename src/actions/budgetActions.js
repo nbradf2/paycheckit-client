@@ -5,7 +5,7 @@ export const addBudgetCard = (budgetMonth, budgetYear) => ({
 	budgetYear
 });
 
-export const ADD_LEDGERENTRY = 'ADD_LEDGERENTRY';
+export const ADD_LEDGER_ENTRY = 'ADD_LEDGER_ENTRY';
 export const addLedgerEntry = (id, checked, month, day, year, amount, label, type) => ({
 	id,
 	checked,
