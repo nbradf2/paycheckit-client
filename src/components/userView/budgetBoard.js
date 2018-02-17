@@ -6,16 +6,16 @@ import {addBudgetCard} from './../../actions/budgetActions';
 import './budgetBoard.css';
 
 export class BudgetBoard extends React.Component {
-	addBudgetCard(month, startingBalance, income, expenses, endingBalance) {
-		this.props.dispatch(addBudgetCard(month, startingBalance, income, expenses, endingBalance));
+	addBudgetCard(budgetMonth, startingBalance, income, expenses, endingBalance) {
+		this.props.dispatch(addBudgetCard(budgetMonth, startingBalance, income, expenses, endingBalance));
 	}
 
 	render() {
-		const cards = this.props.cards.map((card, index) => {
-			<li key={index}>
+		const cards = this.props.cards.map((card, index) => (
+			<li>
 				<BudgetCard index={index} {...card} />
 			</li>
-		});
+		));
 
 		return (
 			<div className="budgetBoard">
@@ -25,7 +25,7 @@ export class BudgetBoard extends React.Component {
 					<li>
 						<AddBudgetCard 
 							type="card"
-							onAdd={month = this.addBudgetCard(month)}
+							onAdd={budgetMonth => this.addBudgetCard(budgetMonth)}
 						/>
 					</li>
 				</ul>
@@ -35,7 +35,11 @@ export class BudgetBoard extends React.Component {
 }
 
 BudgetBoard.defaultProps = {
-	month: ''
+	budgetMonth: 'January',
+	startingBalance: 100,
+	income: 1000,
+	expenses: 500,
+	endingBalance: 600
 };
 
 const mapStateToProps = state => ({

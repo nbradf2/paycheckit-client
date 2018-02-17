@@ -63,21 +63,35 @@ const initialState = {
 			type: 'expense'
 		}
 	],
-	startingBalance: 0,
-	income: 0,
-	expenses: 0,
-	endingBalance: 0
+	cards: [
+		{
+			budgetMonth: 'January',
+			startingBalance: 500,
+			income: 1000,
+			expenses: 800,
+			endingBalance: 700
+		},
+		{
+			budgetMonth: 'February',
+			startingBalance: 700,
+			income: 1000,
+			expenses: 800,
+			endingBalance: 900
+		}
+
+	]
+	
 };
 
 export default function budgetReducer(state=initialState, action) {
 	if(action.type === actions.ADD_BUDGETCARD) {
 		return Object.assign({}, state, {
 			cards: [...state.cards, {
-				month: action.month,
-				startingBalance: 0,
-				income: 0,
-				expenses: 0,
-				endingBalance: 0
+				budgetMonth: action.budgetMonth,
+				startingBalance: action.startingBalance,
+				income: action.income,
+				expenses: action.expenses,
+				endingBalance: action.endingBalance
 			}]
 		});
 	}

@@ -13,11 +13,11 @@ export default class AddBudgetCard extends React.Component {
 
 	onSubmit(event) {
 		event.preventDefault();
-		const month = this.monthInput.value.trim();
-		if (month && this.props.onAdd) {
-			this.props.onAdd(this.monthInput.value);
+		const budgetMonth = this.budgetMonthInput.value.trim();
+		if (budgetMonth && this.props.onAdd) {
+			this.props.onAdd(this.budgetMonthInput.value);
 		}
-		this.monthInput.value = '';
+		this.budgetMonthInput.value = '';
 	}
 
 	setEditing(editing) {
@@ -29,15 +29,15 @@ export default class AddBudgetCard extends React.Component {
 	render() {
 		if (!this.state.editing) {
 			return (
-				<button onClick={() => this.setEditing(true)}>
+				<a href="#addBudget" onClick={() => this.setEditing(true)}>
 					Add a budget
-				</button>
+				</a>
 			);
 		}
 
 		return (
-			<form onSubmit={this.onSubmit}>
-				<input type="month" ref={input => this.monthInput = input} />
+			<form id="addBudget" onSubmit={this.onSubmit}>
+				<input type="budgetMonth" ref={input => this.budgetMonthInput = input} />
 				<button>Add</button>
 				<button type="button" onClick={() => this.setEditing(false)}>Cancel</button>
 			</form>
