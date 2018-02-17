@@ -6,8 +6,8 @@ import {addBudgetCard} from './../../actions/budgetActions';
 import './budgetBoard.css';
 
 export class BudgetBoard extends React.Component {
-	addBudgetCard(budgetMonth, budgetYear, ledgerEntries) {
-		this.props.dispatch(addBudgetCard(budgetMonth, budgetYear, ledgerEntries));
+	addBudgetCard(budgetMonth, budgetYear) {
+		this.props.dispatch(addBudgetCard(budgetMonth, budgetYear));
 	}
 
 	render() {
@@ -24,9 +24,7 @@ export class BudgetBoard extends React.Component {
 					{budgets}
 					<AddBudgetCard 
 						type="budget"
-						onAdd={budgetMonth => this.addBudgetCard(budgetMonth),
-							   budgetYear => this.addBudgetCard(budgetYear),
-							   ledgerEntries => this.addBudgetCard(ledgerEntries)}
+						onAdd={(budgetMonth, budgetYear) => this.addBudgetCard(budgetMonth, budgetYear)}
 					/>
 				</ul>
 			</div>

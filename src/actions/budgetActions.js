@@ -1,11 +1,8 @@
 export const ADD_BUDGETCARD = 'ADD_BUDGETCARD';
-export const addBudgetCard = (budgetMonth, startingBalance, income, expenses, endingBalance) => ({
+export const addBudgetCard = (budgetMonth, budgetYear) => ({
 	type: ADD_BUDGETCARD,
 	budgetMonth,
-	startingBalance,
-	income,
-	expenses,
-	endingBalance,
+	budgetYear
 });
 
 export const ADD_LEDGERENTRY = 'ADD_LEDGERENTRY';

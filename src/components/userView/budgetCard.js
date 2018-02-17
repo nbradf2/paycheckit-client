@@ -7,7 +7,8 @@ export class BudgetCard extends React.Component {
 	render() {
 		return (
 			<div>
-				<h3>{this.props.budgetMonth}</h3>
+				<h3>{this.props.budgetMonth} {this.props.budgetYear}</h3>
+
 				<ul>
 					<li>{this.props.startingBalance}</li>
 					<li>{this.props.income}</li>
