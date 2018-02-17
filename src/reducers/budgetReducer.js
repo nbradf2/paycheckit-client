@@ -1,8 +1,11 @@
 import * as actions from '../actions/budgetActions';
+// removed LEDGERS - find this and remove
 
 const initialState = {
-	ledger: [
-		{
+	budgets: [{
+		budgetMonth: 'January',
+		budgetYear: 2018,
+		ledgerEntries: [{
 			id: '001',
 			checked: false,
 			month: 1,
@@ -21,8 +24,12 @@ const initialState = {
 			amount: -400,
 			label: 'Rent',
 			type: 'expense'
-		},
-		{
+		}]
+	},
+	{
+		budgetMonth: 'February',
+		budgetYear: 2018,
+		ledgerEntries: [{
 			id: '003',
 			checked: false,
 			month: 2,
@@ -41,8 +48,12 @@ const initialState = {
 			amount: -105,
 			label: 'Verizon',
 			type: 'expense'
-		},
-		{
+		}]
+	},
+	{
+		budgetMonth: 'March',
+		budgetYear: 2018,
+		ledgerEntries: [{
 			id: '004',
 			checked: false,
 			month: 3,
@@ -61,39 +72,29 @@ const initialState = {
 			amount: -105,
 			label: 'Visa',
 			type: 'expense'
-		}
-	],
-	cards: [
-		{
-			budgetMonth: 'January',
-			startingBalance: 500,
-			income: 1000,
-			expenses: 800,
-			endingBalance: 700
-		},
-		{
-			budgetMonth: 'February',
-			startingBalance: 700,
-			income: 1000,
-			expenses: 800,
-			endingBalance: 900
-		}
-
-	]
-	
-};
+		}]
+	}]
+}
 
 export default function budgetReducer(state=initialState, action) {
 	if(action.type === actions.ADD_BUDGETCARD) {
 		return Object.assign({}, state, {
-			cards: [...state.cards, {
+			budgets: [...state.budgets, {
 				budgetMonth: action.budgetMonth,
-				startingBalance: action.startingBalance,
-				income: action.income,
-				expenses: action.expenses,
-				endingBalance: action.endingBalance
+				budgetYear: action.budgetYear,
+				ledgerEntries: []
 			}]
 		});
+	}
+	else if (action.type === actions.ADD_LEDGERENTRY) {
+		let ledgers = state.ledgers.map((ledger, index) => {
+			if (index !== action.ledgerIndex) {
+				return ledger;
+			}
+			return Object.assign({}, ledger, {
+				ledgers
+			})
+		})
 	}
 
 	return state;
