@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarUser from './navBarUser';
 import BudgetBoard from './budgetBoard';
+import AddBudgetCard from './addBudgetCard';
 import './userHome.css';
 
 export default function UserHome(props) {
@@ -14,7 +15,6 @@ export default function UserHome(props) {
 	return (
 		<div className="userHome">
 			<NavBarUser title="PaycheckIt" links={links}/>
-			<h2>My Budgets</h2>
 			<BudgetBoard />
 		</div>
 	);

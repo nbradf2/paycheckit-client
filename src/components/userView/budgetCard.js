@@ -13,6 +13,7 @@ export class BudgetCard extends React.Component {
 					<li>{this.props.income}</li>
 					<li>{this.props.expenses}</li>
 					<li>{this.props.endingBalance}</li>
+					{/*BudgetDetails*/}
 					{/*ledgerEntries*/}
 				</ul>
 			</div>

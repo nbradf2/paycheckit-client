@@ -22,12 +22,10 @@ export class BudgetBoard extends React.Component {
 				<h2>My Budgets</h2>
 				<ul>
 					{cards}
-					<li>
-						<AddBudgetCard 
-							type="card"
-							onAdd={budgetMonth => this.addBudgetCard(budgetMonth)}
-						/>
-					</li>
+					<AddBudgetCard 
+						type="card"
+						onAdd={budgetMonth => this.addBudgetCard(budgetMonth)}
+					/>
 				</ul>
 			</div>
 		);
