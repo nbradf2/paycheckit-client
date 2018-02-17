@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-// import BudgetDetails from './budgetDetails';
+import BudgetLedgerEntry from './budgetLedgerEntry';
 import './budgetCard.css';
 
 export class BudgetCard extends React.Component {
@@ -13,7 +13,7 @@ export class BudgetCard extends React.Component {
 					<li>{this.props.income}</li>
 					<li>{this.props.expenses}</li>
 					<li>{this.props.endingBalance}</li>
-					{/*ledgerEntries*/}
+					<BudgetLedgerEntry />
 				</ul>
 			</div>
 		);
