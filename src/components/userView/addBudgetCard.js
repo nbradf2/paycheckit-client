@@ -14,7 +14,6 @@ export default class AddBudgetCard extends React.Component {
 	onSubmit(event) {
 		event.preventDefault();
 		const budgetMonth = this.budgetMonthInput.value.trim();
-		{/*CHECK IF PROBLEMS*/}
 		const budgetYear = this.budgetYearInput.value.trim();
 		if (budgetMonth && this.props.onAdd) {
 			this.props.onAdd(this.budgetMonthInput.value, this.budgetYearInput.value);

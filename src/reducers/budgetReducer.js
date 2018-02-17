@@ -87,12 +87,21 @@ export default function budgetReducer(state=initialState, action) {
 		});
 	}
 	else if (action.type === actions.ADD_LEDGERENTRY) {
-		let ledgers = state.ledgers.map((ledger, index) => {
-			if (index !== action.ledgerIndex) {
-				return ledger;
+		let budgets = state.budgets.map((budget, index) => {
+			if (index !== action.budgetIndex) {
+				return budget;
 			}
-			return Object.assign({}, ledger, {
-				ledgers
+			return Object.assign({}, budget, {
+				ledgerEntries: [...budgets.ledgerEntries, {
+					id: '',
+					checked: false,
+					month: action.month,
+					day: action.day,
+					year: action.year,
+					amount: action.amount,
+					label: action.label,
+					type: action.type
+				}]
 			})
 		})
 	}
