@@ -4,7 +4,7 @@ import './budgetLedgerEntry.css';
 export default function BudgetLedgerEntry(props) {
 	return (
 		<div className="line">
-			<p><span><input type="radio" /></span>{props.month}/{props.day}/{props.year}</p>
+			<p><span><input type="checkbox" /></span>{props.month}/{props.day}/{props.year}</p>
 			<p>{props.amount}</p>
 			<p>{props.label}</p>
 			<p><i className="fa fa-pencil"></i></p>
