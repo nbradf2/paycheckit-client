@@ -13,14 +13,18 @@ import './budgetBoard.css';
 // -> BudgetDetails (shows all summary + budgetLedgerEntry) -> BudgetLedgerEntry (add an expense/income) -> Add ledgerEntryForm
 
 export class BudgetBoard extends React.Component {
-	addBudgetList(month) {
-		this.props.dispatch(addBudgetList(month));
+	addBudgetCard(month, startingBalance, income, expenses, endingBalance) {
+		this.props.dispatch(addBudgetCard(month));
+		this.props.dispatch(addBudgetCard(startingBalance));
+		this.props.dispatch(addBudgetCard(income));
+		this.props.dispatch(addBudgetCard(expenses));
+		this.props.dispatch(addBudgetCard(endingBalance));
 	}
 
 	render() {
-		const budgetList = this.props.budgetList.map((budgetList, index) => (
+		const budgetCard = this.props.budgetCard.map((budgetCards, index) => (
 			<li key={index}>
-				<BudgetList index={index} {...budgetList} />
+				<BudgetCard index={index} {...budgetCards} />
 			</li>
 		));
 
@@ -28,11 +32,11 @@ export class BudgetBoard extends React.Component {
 			<div>
 				<h2>My Budget</h2>
 				<ul>
-					{budgetList}
+					{budgetCards}
 					<li>
-						<AddCardForm 
-							type="list"
-							onAdd={month => this.addBudgetList(month)}
+						<AddBudgetCard 
+							type="card"
+							onAdd={month => this.addBudgetCard(month)}
 						/>
 					</li>
 				</ul>
@@ -42,11 +46,15 @@ export class BudgetBoard extends React.Component {
 }
 
 BudgetBoard.defaultProps = {
-	month: 'January'
+	month: '',
+	startingBalance: 0,
+	income: 0,
+	expenses: 0,
+	endingBalance: 0
 }
 
 const mapStateToProps = state => ({
-	budgetList: state.budgetList
+	budgetCard: state.budgetCard
 });
 
 export default connect(mapStateToProps)(BudgetBoard);

@@ -1,7 +1,7 @@
 import React from 'react';
-import './addCardForm.css';
+import './addBudgetCard.css';
 
-export default class AddCardForm extends React.Component {
+export default class AddBudgetCard extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -34,13 +34,13 @@ export default class AddCardForm extends React.Component {
 			return (
 				<div className="add-button"
 				onClick={() => this.setEditing(true)}>
-					<button href="#addCard">Add {this.props.type}</button>
+					<button href="#addLedgerEntry">Add {this.props.type}</button>
 				</div>
 			)
 		}
 
 		return(
-			<form id="addCard" className="row" onSubmit={this.onSubmit}>
+			<form id="addLedgerEntry" className="row" onSubmit={this.onSubmit}>
 				<div className="input col-9">
 					<h2>Add Item</h2>
 					<label htmlFor="itemDate" hidden>itemDate</label>
