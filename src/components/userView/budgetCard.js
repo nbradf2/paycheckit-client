@@ -13,7 +13,6 @@ export class BudgetCard extends React.Component {
 					<li>{this.props.income}</li>
 					<li>{this.props.expenses}</li>
 					<li>{this.props.endingBalance}</li>
-					{/*BudgetDetails*/}
 					{/*ledgerEntries*/}
 				</ul>
 			</div>
@@ -29,4 +28,4 @@ BudgetCard.defaultProps = {
 	endingBalance: 0
 };
 
-export default connect()(BudgetCard)
+export default connect()(BudgetCard);
