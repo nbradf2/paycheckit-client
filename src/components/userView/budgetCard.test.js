@@ -1,10 +1,10 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import BudgetList from './budgetList';
+import BudgetCard from './budgetCard';
 
-describe('<BudgetList />', () => {
+describe('<BudgetCard />', () => {
 	it('Renders without crashing', () => {
-		shallow(<BudgetList />);
+		shallow(<BudgetCard />);
 	})
 })
