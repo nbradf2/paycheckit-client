@@ -62,30 +62,49 @@ const initialState = {
 			label: 'Visa',
 			type: 'expense'
 		}
-	]
+	],
+	startingBalance: 0,
+	income: 0,
+	expenses: 0,
+	endingBalance: 0
 };
 
 export default function budgetReducer(state=initialState, action) {
-	if (action.type === actions.ADD_BUDGETCARD) {
-		let budgetList = state.budgetList.map((budgetList, index) => {
-			if (index !== action.budgetListIndex) {
-				return budgetList;
-			}
-			return Object.assign({}, budgetList, {
-				lineItems: [...budgetList.lineItems, {
-					budget: 'January 2018',
-					checked: action.checked,
-					date: action.date,
-					amount: action.amount,
-					label: action.label
-				}]
-			});
-		});
-
+	if(action.type === actions.ADD_BUDGETCARD) {
 		return Object.assign({}, state, {
-			budgetList
+			cards: [...state.cards, {
+				month: action.month,
+				startingBalance: 0,
+				income: 0,
+				expenses: 0,
+				endingBalance: 0
+			}]
 		});
 	}
+
 	return state;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
