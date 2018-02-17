@@ -1,0 +1,50 @@
+#addLedgerEntry {
+	text-align: center;
+	background-color: #F6F6FA;
+	width: 100%;
+	padding-top: 5rem;
+	color: #21434B;
+}
+
+#addLedgerEntry input {
+	background-color: #F6F6FA;
+	color: #21434B;
+	font-family: 'Lato', sans-serif; 
+	height: 4rem;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #21434B;
+	padding-top: 1.5rem;
+	text-align: center;
+}
+
+#addLedgerEntry input[type="radio"] {
+	display: inline;
+	height: 1.2rem;
+	width: 1.2rem;
+	text-align: left;
+	margin: 1rem;
+}
+
+#addLedgerEntry input::placeholder {
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	color: #21434B;
+}
+
+#addLedgerEntry button {
+	font-family: 'Lato', sans-serif;
+	margin-top: 1rem;
+	height: 3rem;
+	color: #F6F6FA;
+	background-color: #21434B;
+	border: 1px solid #F6F6FA;
+	width: 15rem;
+}
+
+.income,
+.payment {
+	padding: 1rem;
+	background-color: #21434B;
+	color: #F6F6FA;
+}
