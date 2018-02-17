@@ -13,11 +13,11 @@ export default class AddBudgetCard extends React.Component {
 
 	onSubmit(event) {
 		event.preventDefault();
-		const text = this.textInput.value.trim();
-		if (text && this.props.onAdd) {
-			this.props.onAdd(this.textInput.value);
+		const month = this.monthInput.value.trim();
+		if (month && this.props.onAdd) {
+			this.props.onAdd(this.monthInput.value);
 		}
-		this.textInput.value = '';
+		this.monthInput.value = '';
 	}
 
 	setEditing(editing) {
@@ -37,7 +37,7 @@ export default class AddBudgetCard extends React.Component {
 
 		return (
 			<form onSubmit={this.onSubmit}>
-				<input type="text" ref={input => this.textInput = input} />
+				<input type="month" ref={input => this.monthInput = input} />
 				<button>Add</button>
 				<button type="button" onClick={() => this.setEditing(false)}>Cancel</button>
 			</form>
