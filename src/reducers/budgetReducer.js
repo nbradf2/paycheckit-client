@@ -5,41 +5,62 @@ const initialState = {
 		{
 			id: '001',
 			checked: false,
-			date: '02/02/18',
+			month: 1,
+			day: 22,
+			year: 2018,
 			amount: 1000,
-			label: 'Paycheck'
+			label: 'Paycheck',
+			type: 'income'
 		},
 		{
 			id: '002',
 			checked: false,
-			date: '02/10/18',
+			month: 1,
+			day: 25,
+			year: 2018,
 			amount: -400,
-			label: 'Rent'
+			label: 'Rent',
+			type: 'expense'
 		},
 		{
 			id: '003',
 			checked: false,
-			date: '02/10/18',
+			month: 2,
+			day: 1,
+			year: 2018,
 			amount: -75,
-			label: 'MasterCard'
+			label: 'MasterCard',
+			type: 'expense'
 		},
 		{
 			id: '004',
 			checked: false,
-			date: '02/02/18',
-			amount: -105,
-			label: 'Verizon'
-		}
-	],
-
-	budgetList: [
-		{
-			month: 1,
+			month: 2,
+			day: 15,
 			year: 2018,
-			startingBalance: 1000,
-			income: 2000,
-			expenses: 500,
-			endingBalance: 3000
+			amount: -105,
+			label: 'Verizon',
+			type: 'expense'
+		},
+		{
+			id: '004',
+			checked: false,
+			month: 3,
+			day: 3,
+			year: 2018,
+			amount: -105,
+			label: 'Electric',
+			type: 'expense'
+		},
+		{
+			id: '004',
+			checked: false,
+			month: 3,
+			day: 10,
+			year: 2018,
+			amount: -105,
+			label: 'Visa',
+			type: 'expense'
 		}
 	]
 };
