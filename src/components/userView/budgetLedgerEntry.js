@@ -3,10 +3,12 @@ import './budgetLedgerEntry.css';
 
 export default function BudgetLedgerEntry(props) {
 	return (
-		<div class="line">
+		<div className="line">
 			<p><span><input type="radio" /></span>{props.month}/{props.day}/{props.year}</p>
 			<p>{props.amount}</p>
 			<p>{props.label}</p>
+			<p><i className="fa fa-pencil"></i></p>
+			<p><i className="fa fa-trash"></i></p>
 		</div>
 	)
 }
