@@ -22,9 +22,9 @@ export class BudgetBoard extends React.Component {
 	}
 
 	render() {
-		const budgetCard = this.props.budgetCard.map((budgetCards, index) => (
+		const budgetCard = this.props.budgetCard.map((budgetCard, index) => (
 			<li key={index}>
-				<BudgetCard index={index} {...budgetCards} />
+				<BudgetCard index={index} {...budgetCard} />
 			</li>
 		));
 
@@ -32,7 +32,7 @@ export class BudgetBoard extends React.Component {
 			<div>
 				<h2>My Budget</h2>
 				<ul>
-					{budgetCards}
+					{budgetCard}
 					<li>
 						<AddBudgetCard 
 							type="card"

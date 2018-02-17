@@ -45,15 +45,7 @@ const initialState = {
 };
 
 export default function budgetReducer(state=initialState, action) {
-	if (action.type === actions.ADD_BUDGETLIST) {
-		return Object.assign({}, state, {
-			budgetList: [...state.budgetList, {
-				month: action.month,
-				startingBalance: action.startingBalance
-			}]
-		});
-	}
-	else if (action.type === actions.ADD_BUDGETCARD) {
+	if (action.type === actions.ADD_BUDGETCARD) {
 		let budgetList = state.budgetList.map((budgetList, index) => {
 			if (index !== action.budgetListIndex) {
 				return budgetList;
