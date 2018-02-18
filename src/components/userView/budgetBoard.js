@@ -13,7 +13,7 @@ export class BudgetBoard extends React.Component {
 	render() {
 		const budgets = this.props.budgets.map((budget, index) => (
 			<li>
-				<BudgetCard index={index} {...budget} />
+				<BudgetCard key={index} {...budget} />
 			</li>
 		));
 

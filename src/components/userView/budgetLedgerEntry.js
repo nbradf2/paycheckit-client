@@ -9,6 +9,7 @@ export default function BudgetLedgerEntry(props) {
 			<p>{props.label}</p>
 			<p><a href="#addLedgerEntry"><i className="fa fa-pencil"></i></a></p>
 			<p><i className="fa fa-trash"></i></p>
+			<p>{props.type}</p>
 		</div>
 	)
 }
@@ -19,6 +20,7 @@ BudgetLedgerEntry.defaultProps = {
 	year: 2018,
 	amount: 75,
 	label: 'Visa',
+	amountType: 'income'
 }
 
 

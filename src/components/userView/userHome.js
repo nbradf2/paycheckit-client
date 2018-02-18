@@ -1,7 +1,6 @@
 import React from 'react';
 import NavBarUser from './navBarUser';
 import BudgetBoard from './budgetBoard';
-import AddBudgetCard from './addBudgetCard';
 import './userHome.css';
 
 export default function UserHome(props) {

@@ -13,7 +13,7 @@ const initialState = {
 			year: 2018,
 			amount: 1000,
 			label: 'Paycheck',
-			type: 'income'
+			amountType: 'income'
 		},
 		{
 			id: '002',
@@ -23,7 +23,7 @@ const initialState = {
 			year: 2018,
 			amount: -400,
 			label: 'Rent',
-			type: 'expense'
+			amountType: 'expense'
 		}]
 	},
 	{
@@ -37,7 +37,7 @@ const initialState = {
 			year: 2018,
 			amount: -75,
 			label: 'MasterCard',
-			type: 'expense'
+			amountType: 'expense'
 		},
 		{
 			id: '004',
@@ -47,7 +47,7 @@ const initialState = {
 			year: 2018,
 			amount: -105,
 			label: 'Verizon',
-			type: 'expense'
+			amountType: 'expense'
 		}]
 	},
 	{
@@ -61,7 +61,7 @@ const initialState = {
 			year: 2018,
 			amount: -105,
 			label: 'Electric',
-			type: 'expense'
+			amountType: 'expense'
 		},
 		{
 			id: '004',
@@ -71,7 +71,7 @@ const initialState = {
 			year: 2018,
 			amount: -105,
 			label: 'Visa',
-			type: 'expense'
+			amountType: 'expense'
 		}]
 	}]
 }
@@ -92,7 +92,7 @@ export default function budgetReducer(state=initialState, action) {
 				return budget;
 			}
 			return Object.assign({}, budget, {
-				ledgerEntries: [...budgets.ledgerEntries, {
+				ledgerEntries: [...budget.ledgerEntries, {
 					id: '',
 					checked: false,
 					month: action.month,
@@ -100,14 +100,18 @@ export default function budgetReducer(state=initialState, action) {
 					year: action.year,
 					amount: action.amount,
 					label: action.label,
-					type: action.type
+					amountType: action.amountType
 				}]
-			})
-		})
+			});
+		});
+		
+		return Object.assign({}, state, {
+			budgets
+		});
 	}
 
 	return state;
-}
+};
 
 
 
