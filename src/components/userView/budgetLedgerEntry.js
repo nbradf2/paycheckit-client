@@ -15,6 +15,7 @@ export default function BudgetLedgerEntry(props) {
 }
 
 BudgetLedgerEntry.defaultProps = {
+	id: '',
 	month: 2,
 	day: 25,
 	year: 2018,

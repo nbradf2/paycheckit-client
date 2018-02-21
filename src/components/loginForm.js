@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import Register from './register';
 import './loginForm.css';
 
 export default function LoginForm(props) {
@@ -12,7 +14,7 @@ export default function LoginForm(props) {
 				<input type="text" name="password" id="password" placeholder="Password"/>
 			</div>
 			<button type="submit">Submit</button>
-			<p>Not a registered user?  Click <a href="#registerForm">here</a>!</p>
+			<p>Not a registered user?  Click <Link to={'/Register'}>here</Link>!</p>
 		</form>
 	);
 } 

@@ -24,13 +24,13 @@ export default function LandingPage(props) {
 	return (
 		<Router>
 			<div>
-					<NavBarPublic title="PaycheckIt" links={links} />
-					<Hero />
-					<About />
-					<LoginForm />
-					<Route exact path="/" component={Register} />
-					<UserHome />
-					<Footer />
+				<NavBarPublic title="PaycheckIt" links={links} />
+				<Hero />
+				<About />
+				<LoginForm />
+				<Route exact path="/" component={Register} />
+				<UserHome />
+				<Footer />
 			</div>
 		</Router>
 	);

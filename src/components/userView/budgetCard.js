@@ -13,36 +13,28 @@ export class BudgetCard extends React.Component {
 
 	render() {
 		const ledgerEntries = this.props.ledgerEntries.map((ledgerEntry, index) => {
-			<li>
-				<BudgetLedgerEntry key={index} {...ledgerEntry} />
-			</li>
+			<div>
+				<BudgetLedgerEntry index={index} {...ledgerEntry} />
+			</div>
 		})
+
 		return (
 			<div>
-				<h3>{this.props.budgetMonth} {this.props.budgetYear}</h3>
-				<ul>
-					<li>Starting Balance: {this.props.startingBalance}</li>
-					<li>Income: {this.props.income}</li>
-					<li>Expenses: {this.props.expenses}</li>
-					<li>Ending Balance: {this.props.endingBalance}</li>
+				<h3>My Budget Entries</h3>
+				<div>
 					{ledgerEntries}
-					<BudgetLedgerEntry />
 					<AddLedgerEntry 
 						type="ledgerEntry"
 						onAdd={(month, day, year, amount, label, amountType) => this.addLedgerEntry(month, day, year, amount, label, amountType)}
 					/>
-				</ul>
+				</div>
 			</div>
 		);
 	}
 }
 
-BudgetCard.defaultProps = {
-	budgetMonth: '',
-	startingBalance: 0,
-	income: 0,
-	expenses: 0,
-	endingBalance: 0
-};
+const mapStateToProps = state => ({
+	ledgerEntries: state.ledgerEntries
+})
 
-export default connect()(BudgetCard);
+export default connect(mapStateToProps)(BudgetCard);

@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import LoginForm from './loginForm';
 import './register.css';
 
 export default function Register(props) {
@@ -18,7 +20,7 @@ export default function Register(props) {
 				<input type="text" name="repeatPassword" id="repeatPassword" placeholder="Repeat Password"/>
 			</div>
 			<button type="submit">Submit</button>
-			<p>Already have an account?  Click <a href="#loginForm">here</a>!</p>
+			<p>Already have an account?  Click <Link to="/LoginForm">here</Link>!</p>
 		</form>
 	);
 }
