@@ -7,15 +7,12 @@ import './budgetCard.css';
 
 
 export class BudgetCard extends React.Component {
-	addLedgerEntry(month, day, year, amount, label, amountType) {
-		this.props.dispatch(addLedgerEntry((month, day, year, amount, label, amountType), this.props.index));
-	}
 
 	render() {
 		const ledgerEntries = this.props.ledgerEntries.map((ledgerEntry, index) => {
-			<div>
-				<BudgetLedgerEntry index={index} {...ledgerEntry} />
-			</div>
+			return (
+					<BudgetLedgerEntry key={index} {...ledgerEntry} />
+			)
 		})
 
 		return (
@@ -23,10 +20,7 @@ export class BudgetCard extends React.Component {
 				<h3>My Budget Entries</h3>
 				<div>
 					{ledgerEntries}
-					<AddLedgerEntry 
-						type="ledgerEntry"
-						onAdd={(month, day, year, amount, label, amountType) => this.addLedgerEntry(month, day, year, amount, label, amountType)}
-					/>
+					<AddLedgerEntry />
 				</div>
 			</div>
 		);
