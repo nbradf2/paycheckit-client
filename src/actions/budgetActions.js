@@ -1,13 +1,7 @@
 export const ADD_LEDGER_ENTRY = 'ADD_LEDGER_ENTRY';
-export const addLedgerEntry = (id, month, day, year, amount, label, amountType) => ({
+export const addLedgerEntry = (ledgerEntry) => ({
 	type: ADD_LEDGER_ENTRY,
-	id,
-	month,
-	day,
-	year,
-	amount,
-	label,
-	amountType
+  ledgerEntry
 })
 
 // GETLEDGER, POSTLEDGER, etc.
