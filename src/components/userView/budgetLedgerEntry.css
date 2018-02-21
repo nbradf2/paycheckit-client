@@ -1,0 +1,10 @@
+.line p {
+	display: inline;
+	margin-right: .5rem;
+}
+
+.line p input {
+	margin-right: 0.5rem;
+	height: 1rem;
+	width: 1rem;
+}

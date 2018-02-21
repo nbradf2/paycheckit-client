@@ -1,38 +1,102 @@
+import {ADD_LEDGER_ENTRY} from '../actions/budgetActions';
+// removed LEDGERS - find this and remove
+
 const initialState = {
-	date: 'January 2018',
-	startingBalance: 1000,
-	budget: [
+	ledgerEntries: [
 		{
-			checked: false,
-			date: '02/02/18',
+			id: '001',
+			month: 1,
+			day: 22,
+			year: 2018,
 			amount: 1000,
-			label: 'Paycheck'
+			label: 'Paycheck',
+			amountType: 'income'
 		},
 		{
-			checked: false,
-			date: '02/10/18',
-			amount: 400,
-			label: 'Savings'
+			id: '002',
+			month: 1,
+			day: 25,
+			year: 2018,
+			amount: -400,
+			label: 'Rent',
+			amountType: 'expense'
 		},
 		{
-			checked: false,
-			date: '02/10/18',
+			id: '003',
+			month: 2,
+			day: 1,
+			year: 2018,
 			amount: -75,
-			label: 'MasterCard'
+			label: 'MasterCard',
+			amountType: 'expense'
 		},
 		{
-			checked: false,
-			date: '02/02/18',
+			id: '004',
+			month: 2,
+			day: 15,
+			year: 2018,
 			amount: -105,
-			label: 'Verizon'
+			label: 'Verizon',
+			amountType: 'expense'
+		},
+		{
+			id: '004',
+			month: 3,
+			day: 3,
+			year: 2018,
+			amount: -105,
+			label: 'Electric',
+			amountType: 'expense'
+		},
+		{
+			id: '004',
+			month: 3,
+			day: 10,
+			year: 2018,
+			amount: -105,
+			label: 'Visa',
+			amountType: 'expense'
 		}
 	]
-
-};
+}
 
 export default function budgetReducer(state=initialState, action) {
-	
-	{/*Series of IF statements that will return new versions of the state*/}
+	if (action.type === action.ADD_LEDGER_ENTRY) {
+		return Object.assign({}, state, {
+			ledgerEntries: [...state.ledgerEntries, {
+				id: '',
+				month: action.month,
+				day: action.day,
+				year: action.year,
+				amount: action.amount,
+				label: action.label,
+				amountType: action.amountType
+			}]
+		});
+	}
 	return state;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

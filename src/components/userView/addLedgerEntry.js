@@ -1,5 +1,5 @@
 import React from 'react';
-import './addLedgerEntry.css'
+import './addLedgerEntry.css';
 
 export default class AddLedgerEntry extends React.Component {
 	constructor(props) {
@@ -13,20 +13,33 @@ export default class AddLedgerEntry extends React.Component {
 
 	onSubmit(event) {
 		event.preventDefault();
-		const date = this.itemDate.value;
-		const amount = this.itemAmount.value;
-		const label = this.itemLabel.value;
-		this.itemDate.value = '';
-		this.itemAmount.value = 0;
-		this.itemLabel.value = '';
-		console.log(date, amount, label)
+		const month = this.monthInput.value;
+		const day = this.dayInput.value;
+		const year = this.yearInput.value;
+		const amount = this.amountInput.value;
+		const label = this.labelInput.value;
+		const amountType = this.amountType.value;
+		if ((month, day, year, amount, label, amountType) && this.props.onAdd) {
+			this.props.onAdd(this.monthInput.value,
+							 this.dayInput.value,
+							 this.yearInput.value,
+							 this.amountInput.value,
+							 this.labelInput.value,
+							 this.amountType.value);
+		}
+		this.monthInput.value = '';
+		this.dayInput.value = '';
+		this.yearInput.value = '';
+		this.amountInput.value = '';
+		this.labelInput.value = '';
+		this.amountType.value = '';
 		{/*ADD DISPATCH HERE TO DATABASE*/}
 	}
 
 	setEditing(editing) {
 		this.setState({
 			editing
-		})
+		});
 	}
 
 	render() {
@@ -39,39 +52,41 @@ export default class AddLedgerEntry extends React.Component {
 			)
 		}
 
-		return(
+		return (
 			<form id="addLedgerEntry" className="row" onSubmit={this.onSubmit}>
 				<div className="input col-9">
 					<h2>Add Item</h2>
-					<label htmlFor="itemDate" hidden>itemDate</label>
-					<input type="date" name="itemDate" id="itemDate" ref={input => this.itemDate=input} placeholder="Date"/>
-					<label htmlFor="itemAmount" hidden>Item Amount</label>
-					<input type="number" name="itemAmount" id="itemAmount" ref={input => this.itemAmount=input} placeholder="Amount"/>
-					<label htmlFor="itemLabel" hidden>Item Label</label>
-					<input type="text" name="itemLabel" id="itemLabel" ref={input => this.itemLabel=input} placeholder="Label"/>
+					<label htmlFor="month" hidden>Month</label>
+					<input type="number" min="1" max="12" name="month" id="month" ref={input => this.monthInput=input} placeholder="month"/>
+					<label htmlFor="day" hidden>day</label>
+					<input type="number" min="1" max="31" name="day" id="day" ref={input => this.dayInput=input} placeholder="day"/>
+					<label htmlFor="year" hidden>year</label>
+					<input type="number" min="2018" name="year" id="year" ref={input => this.yearInput=input} placeholder="year"/>
+					<label htmlFor="amount" hidden>Amount</label>
+					<input type="number" name="amount" id="amount" ref={input => this.amountInput=input} placeholder="Amount"/>
+					<label htmlFor="label" hidden>Item Label</label>
+					<input type="text" name="label" id="label" ref={input => this.labelInput=input} placeholder="Label"/>
 					<div className="paymentType">
 						<h4 className="income">Income</h4>
-						<input type="radio" name="type" id="paycheck" />
+						<input type="radio" name="income" id="paycheck" ref={input => this.amountType=input} value="Paycheck"/>
 						<label htmlFor="paycheck">Paycheck</label>
-						<input type="radio" name="type" id="addSavings" />
-						<label htmlFor="addSavings">Savings</label>
-						<input type="radio" name="type" id="addOther" />
+						<input type="radio" name="income" id="addOther" ref={input => this.amountType=input} value="Other"/>
 						<label htmlFor="addOther">Other</label>
 						<h4 className="payment">Payment</h4>
-						<input type="radio" name="type" id="creditCard"/>
+						<input type="radio" name="expense" id="creditCard" ref={input => this.amountType=input} value="Credit Card"/>
 						<label htmlFor="creditCard">Credit Card</label>
-						<input type="radio" name="type" id="minusSavings"/>
-						<label htmlFor="minusSavings">Savings</label>
-						<input type="radio" name="type" id="loan" />
+						<input type="radio" name="expense" id="savings" ref={input => this.amountType=input} value="Savings"/>
+						<label htmlFor="savings">Savings</label>
+						<input type="radio" name="expense" id="loan" ref={input => this.amountType=input} value="Loan"/>
 						<label htmlFor="loan">Loan</label>
-						<input type="radio" name="type" id="utility" />
+						<input type="radio" name="expense" id="utility" ref={input => this.amountType=input} value="Utility"/>
 						<label htmlFor="utility">Utility</label>
-						<input type="radio" name="type" id="personal"/>
+						<input type="radio" name="expense" id="personal" ref={input => this.amountType=input} value="Personal"/>
 						<label htmlFor="personal">Personal</label>
-						<input type="radio" name="type" id="minusOther"/>
+						<input type="radio" name="expense" id="minusOther" ref={input => this.amountType=input} value="Other"/>
 						<label htmlFor="minusOther">Other</label>
 					</div>
-					<button onSubmit={this.onSubmit}>Add Item</button>
+					<button onSubmit={this.onSubmit}>Add</button>
 					<button type="button" onClick={() => this.setEditing(false)}>Cancel</button>
 				</div>
 			</form>

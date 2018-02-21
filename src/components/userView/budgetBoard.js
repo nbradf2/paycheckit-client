@@ -1,13 +1,15 @@
 import React from 'react';
-import BudgetList from './budgetList';
-import AddCardForm from './addCardForm';
+import {connect} from 'react-redux';
+import BudgetCard from './budgetCard';
 import './budgetBoard.css';
 
 export default function BudgetBoard(props) {
-	return(
-		<div id="budgetBoard">
-			<BudgetList />
-			<AddCardForm />
+	return (
+		<div className="budgetBoard">
+			<h2>My Budgets</h2>
+			<ul>
+				<BudgetCard />
+			</ul>
 		</div>
 	);
 }
