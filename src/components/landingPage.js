@@ -28,7 +28,7 @@ export default function LandingPage(props) {
 				<Hero />
 				<About />
 				<Switch>
-				<LoginForm />
+					<Route exact path="/loginForm" component={LoginForm} />
 					<Route exact path="/register" component={Register} />
 					<Route exact path="/userHome" component={UserHome} />
 				</Switch>
