@@ -18,8 +18,8 @@ export default function Register(props) {
 				<label htmlFor="repeatPassword" hidden>Repeat Password</label>
 				<input type="text" name="repeatPassword" id="repeatPassword" placeholder="Repeat Password"/>
 			</div>
-			<button type="submit">Submit</button>
-			<p>Already have an account?  Click <Link to="/LoginForm">here</Link>!</p>
+			<button type="submit"><Link to="/userHome">Submit</Link></button>
+			<p>Already have an account?  Click <Link to="/loginForm">here</Link>!</p>
 		</form>
 	);
 }

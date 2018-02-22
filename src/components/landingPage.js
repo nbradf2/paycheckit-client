@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import NavBarPublic from './navBarPublic';
 import Hero from './hero';
 import About from './about';
@@ -27,9 +27,11 @@ export default function LandingPage(props) {
 				<NavBarPublic title="PaycheckIt" links={links} />
 				<Hero />
 				<About />
+				<Switch>
 				<LoginForm />
-				<Route exact path="/" component={Register} />
-				<UserHome />
+					<Route exact path="/register" component={Register} />
+					<Route exact path="/userHome" component={UserHome} />
+				</Switch>
 				<Footer />
 			</div>
 		</Router>
