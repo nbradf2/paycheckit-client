@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Register from './register';
 import './loginForm.css';
 
 export default function LoginForm(props) {

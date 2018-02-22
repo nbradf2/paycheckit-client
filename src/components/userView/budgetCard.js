@@ -7,15 +7,17 @@ import './budgetCard.css';
 
 
 export class BudgetCard extends React.Component {
+	// would remove and put in AddLedgerEntry??
 	addLedgerEntry(month, day, year, amount, label, amountType) {
 		this.props.dispatch(addLedgerEntry((month, day, year, amount, label, amountType), this.props.index));
 	}
 
 	render() {
 		const ledgerEntries = this.props.ledgerEntries.map((ledgerEntry, index) => {
-			<div>
-				<BudgetLedgerEntry index={index} {...ledgerEntry} />
-			</div>
+			return (
+					<BudgetLedgerEntry key={index} {...ledgerEntry} />
+			)
+			
 		})
 
 		return (
@@ -25,6 +27,7 @@ export class BudgetCard extends React.Component {
 					{ledgerEntries}
 					<AddLedgerEntry 
 						type="ledgerEntry"
+						// no need to have onAdd here; should be dispached through AddLedgerEntry component
 						onAdd={(month, day, year, amount, label, amountType) => this.addLedgerEntry(month, day, year, amount, label, amountType)}
 					/>
 				</div>

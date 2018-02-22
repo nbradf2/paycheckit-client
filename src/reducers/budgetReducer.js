@@ -61,7 +61,7 @@ const initialState = {
 }
 
 export default function budgetReducer(state=initialState, action) {
-	if (action.type === action.ADD_LEDGER_ENTRY) {
+	if (action.type === ADD_LEDGER_ENTRY) {
 		return Object.assign({}, state, {
 			ledgerEntries: [...state.ledgerEntries, {
 				id: '',

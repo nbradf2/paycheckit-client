@@ -13,6 +13,8 @@ export default class AddLedgerEntry extends React.Component {
 
 	onSubmit(event) {
 		event.preventDefault();
+		let ledgerEntry = {};
+		ledgerEntry.month = this.monthInput.value;
 		const month = this.monthInput.value;
 		const day = this.dayInput.value;
 		const year = this.yearInput.value;
@@ -86,7 +88,7 @@ export default class AddLedgerEntry extends React.Component {
 						<input type="radio" name="expense" id="minusOther" ref={input => this.amountType=input} value="Other"/>
 						<label htmlFor="minusOther">Other</label>
 					</div>
-					<button onSubmit={this.onSubmit}>Add</button>
+					<button type="submit">Add</button>
 					<button type="button" onClick={() => this.setEditing(false)}>Cancel</button>
 				</div>
 			</form>
