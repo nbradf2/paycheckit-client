@@ -1,7 +1,9 @@
 import React from 'react';
 import './addLedgerEntry.css';
+import {connect} from 'react-redux';
+import {addLedgerEntry} from './../../actions/budgetActions'
 
-export default class AddLedgerEntry extends React.Component {
+export class AddLedgerEntry extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -15,20 +17,14 @@ export default class AddLedgerEntry extends React.Component {
 		event.preventDefault();
 		let ledgerEntry = {};
 		ledgerEntry.month = this.monthInput.value;
-		const month = this.monthInput.value;
-		const day = this.dayInput.value;
-		const year = this.yearInput.value;
-		const amount = this.amountInput.value;
-		const label = this.labelInput.value;
-		const amountType = this.amountType.value;
-		if ((month, day, year, amount, label, amountType) && this.props.onAdd) {
-			this.props.onAdd(this.monthInput.value,
-							 this.dayInput.value,
-							 this.yearInput.value,
-							 this.amountInput.value,
-							 this.labelInput.value,
-							 this.amountType.value);
-		}
+		ledgerEntry.day = this.dayInput.value;
+		ledgerEntry.year = this.yearInput.value;
+		ledgerEntry.amount = this.amountInput.value;
+		ledgerEntry.label = this.labelInput.value;
+		ledgerEntry.amountType = this.amountType.value;
+		
+		this.props.dispatch(addLedgerEntry(ledgerEntry));
+
 		this.monthInput.value = '';
 		this.dayInput.value = '';
 		this.yearInput.value = '';
