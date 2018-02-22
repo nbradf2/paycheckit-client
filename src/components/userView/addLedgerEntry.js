@@ -91,3 +91,5 @@ export class AddLedgerEntry extends React.Component {
 		);
 	}
 }
+
+export default connect()(AddLedgerEntry);

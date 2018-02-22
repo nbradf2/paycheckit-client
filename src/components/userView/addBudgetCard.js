@@ -1,4 +1,8 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import BudgetLedgerEntry from './budgetLedgerEntry';
+import AddLedgerEntry from './addLedgerEntry';
+import {addLedgerEntry} from './../../actions/budgetActions';
 import './addBudgetCard.css';
 
 export default class AddBudgetCard extends React.Component {
