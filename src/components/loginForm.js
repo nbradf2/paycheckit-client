@@ -12,7 +12,7 @@ export default function LoginForm(props) {
 				<label htmlFor="password" hidden>Password</label>
 				<input type="text" name="password" id="password" placeholder="Password"/>
 			</div>
-			<button type="submit"><Link to ={'/userHome'}>Submit</Link></button>
+			<button type="submit">Submit</button>
 			<p>Not a registered user?  Click <Link to={'/register'}>here</Link>!</p>
 		</form>
 	);

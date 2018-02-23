@@ -30,8 +30,8 @@ export default function LandingPage(props) {
 				<Switch>
 					<Route exact path="/loginForm" component={LoginForm} />
 					<Route exact path="/register" component={Register} />
-					<Route exact path="/userHome" component={UserHome} />
 				</Switch>
+				<Route exact path="/userHome" component={UserHome} />
 				<Footer />
 			</div>
 		</Router>
