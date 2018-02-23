@@ -27,11 +27,9 @@ export default function LandingPage(props) {
 				<NavBarPublic title="PaycheckIt" links={links} />
 				<Hero />
 				<About />
-				<Switch>
-					<Route exact path="/loginForm" component={LoginForm} />
-					<Route exact path="/register" component={Register} />
-				</Switch>
-				<Route exact path="/userHome" component={UserHome} />
+				<LoginForm />
+				{/*<Route exact path="/register" component={Register}/>*/}
+				<UserHome />
 				<Footer />
 			</div>
 		</Router>
