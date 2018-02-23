@@ -7,9 +7,10 @@ export default function BudgetLedgerEntry(props) {
 			<p><span><input type="checkbox" /></span>{props.month}/{props.day}/{props.year}</p>
 			<p>{props.amount}</p>
 			<p>{props.label}</p>
+			<p>{props.type}</p>
+			<p>{props.category}</p>
 			<p><a href="#addLedgerEntry"><i className="fa fa-pencil"></i></a></p>
 			<p><i className="fa fa-trash"></i></p>
-			<p>{props.type}</p>
 		</div>
 	)
 }

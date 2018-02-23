@@ -21,7 +21,7 @@ export class AddLedgerEntry extends React.Component {
 		ledgerEntry.year = this.yearInput.value;
 		ledgerEntry.amount = this.amountInput.value;
 		ledgerEntry.label = this.labelInput.value;
-		ledgerEntry.amountType = this.amountType.value;
+		ledgerEntry.type = this.type.value;
 		
 		this.props.dispatch(addLedgerEntry(ledgerEntry));
 
@@ -30,7 +30,7 @@ export class AddLedgerEntry extends React.Component {
 		this.yearInput.value = '';
 		this.amountInput.value = '';
 		this.labelInput.value = '';
-		this.amountType.value = '';
+		this.type.value = '';
 		{/*ADD DISPATCH HERE TO DATABASE*/}
 	}
 
@@ -66,22 +66,22 @@ export class AddLedgerEntry extends React.Component {
 					<input type="text" name="label" id="label" ref={input => this.labelInput=input} placeholder="Label"/>
 					<div className="paymentType">
 						<h4 className="income">Income</h4>
-						<input type="radio" name="income" id="paycheck" ref={input => this.amountType=input} value="Paycheck"/>
+						<input type="radio" name="income" id="paycheck" ref={input => this.type=input} value="Paycheck"/>
 						<label htmlFor="paycheck">Paycheck</label>
-						<input type="radio" name="income" id="addOther" ref={input => this.amountType=input} value="Other"/>
+						<input type="radio" name="income" id="addOther" ref={input => this.type=input} value="Other"/>
 						<label htmlFor="addOther">Other</label>
 						<h4 className="payment">Payment</h4>
-						<input type="radio" name="expense" id="creditCard" ref={input => this.amountType=input} value="Credit Card"/>
+						<input type="radio" name="expense" id="creditCard" ref={input => this.type=input} value="Credit Card"/>
 						<label htmlFor="creditCard">Credit Card</label>
-						<input type="radio" name="expense" id="savings" ref={input => this.amountType=input} value="Savings"/>
+						<input type="radio" name="expense" id="savings" ref={input => this.type=input} value="Savings"/>
 						<label htmlFor="savings">Savings</label>
-						<input type="radio" name="expense" id="loan" ref={input => this.amountType=input} value="Loan"/>
+						<input type="radio" name="expense" id="loan" ref={input => this.type=input} value="Loan"/>
 						<label htmlFor="loan">Loan</label>
-						<input type="radio" name="expense" id="utility" ref={input => this.amountType=input} value="Utility"/>
+						<input type="radio" name="expense" id="utility" ref={input => this.type=input} value="Utility"/>
 						<label htmlFor="utility">Utility</label>
-						<input type="radio" name="expense" id="personal" ref={input => this.amountType=input} value="Personal"/>
+						<input type="radio" name="expense" id="personal" ref={input => this.type=input} value="Personal"/>
 						<label htmlFor="personal">Personal</label>
-						<input type="radio" name="expense" id="minusOther" ref={input => this.amountType=input} value="Other"/>
+						<input type="radio" name="expense" id="minusOther" ref={input => this.type=input} value="Other"/>
 						<label htmlFor="minusOther">Other</label>
 					</div>
 					<button type="submit">Add</button>

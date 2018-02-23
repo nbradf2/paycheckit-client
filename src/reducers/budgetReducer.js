@@ -10,7 +10,8 @@ const initialState = {
 			year: 2018,
 			amount: 1000,
 			label: 'Paycheck',
-			amountType: 'income'
+			type: 'income',
+			category: 'Job'
 		},
 		{
 			id: '002',
@@ -19,7 +20,8 @@ const initialState = {
 			year: 2018,
 			amount: -400,
 			label: 'Rent',
-			amountType: 'expense'
+			type: 'expense',
+			category: 'Rent'
 		},
 		{
 			id: '003',
@@ -28,7 +30,8 @@ const initialState = {
 			year: 2018,
 			amount: -75,
 			label: 'MasterCard',
-			amountType: 'expense'
+			type: 'expense',
+			category: 'Credit Card'
 		},
 		{
 			id: '004',
@@ -37,7 +40,8 @@ const initialState = {
 			year: 2018,
 			amount: -105,
 			label: 'Verizon',
-			amountType: 'expense'
+			type: 'expense',
+			category: 'Utility'
 		},
 		{
 			id: '004',
@@ -46,7 +50,8 @@ const initialState = {
 			year: 2018,
 			amount: -105,
 			label: 'Electric',
-			amountType: 'expense'
+			type: 'expense',
+			category: 'Utility'
 		},
 		{
 			id: '004',
@@ -55,7 +60,8 @@ const initialState = {
 			year: 2018,
 			amount: -105,
 			label: 'Visa',
-			amountType: 'expense'
+			type: 'expense',
+			category: 'Credit Card'
 		}
 	],
 	monthSummaries: [],
@@ -66,7 +72,8 @@ const initialState = {
 		year: null,
 		amount: null,
 		label: null,
-		amountType: null
+		type: null,
+		category: null
 	}
 }
 
@@ -85,9 +92,6 @@ export default function budgetReducer(state=initialState, action ) {
 
 	return state;
 }
-
-
-
 
 
 
