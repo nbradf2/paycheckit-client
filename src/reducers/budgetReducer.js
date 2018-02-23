@@ -1,4 +1,4 @@
-import {ADD_LEDGER_ENTRY} from '../actions/budgetActions';
+import {ADD_LEDGER_ENTRY, UPDATE_SUMMARIES} from '../actions/budgetActions';
 // removed LEDGERS - find this and remove
 
 const initialState = {
@@ -57,7 +57,17 @@ const initialState = {
 			label: 'Visa',
 			amountType: 'expense'
 		}
-	]
+	],
+	monthSummaries: [],
+	ledgerEntry: {
+		id: null,
+		month: null,
+		day: null,
+		year: null,
+		amount: null,
+		label: null,
+		amountType: null
+	}
 }
 
 export default function budgetReducer(state=initialState, action ) {
@@ -66,6 +76,13 @@ export default function budgetReducer(state=initialState, action ) {
 			ledgerEntries: [...state.ledgerEntries, action.ledgerEntry]
 		});
 	}
+
+	if (action.type === UPDATE_SUMMARIES) {
+		return Object.assign({}, state, {
+			monthlySummaries: action.summary
+		})
+	}
+
 	return state;
 }
 

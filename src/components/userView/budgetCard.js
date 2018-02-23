@@ -2,11 +2,15 @@ import React from 'react';
 import {connect} from 'react-redux';
 import BudgetLedgerEntry from './budgetLedgerEntry';
 import AddLedgerEntry from './addLedgerEntry';
-import {addLedgerEntry} from './../../actions/budgetActions'
+import {addLedgerEntry, updateSummaries} from './../../actions/budgetActions'
 import './budgetCard.css';
 
 
 export class BudgetCard extends React.Component {
+	componentWillMount() {
+		this.props.dispatch(updateSummaries(this.props.ledgerEntries));
+	}
+
 	render() {
 		const ledgerEntries = this.props.ledgerEntries.map((ledgerEntry, index) => {
 			return (
