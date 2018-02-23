@@ -10,11 +10,11 @@ export class BudgetCard extends React.Component {
 	componentWillMount() {
 		this.props.dispatch(updateSummaries(this.props.ledgerEntries));
 	}
-
+	// map over SUMMARIES instead of ENTRIES
 	render() {
 		const ledgerEntries = this.props.ledgerEntries.map((ledgerEntry, index) => {
 			return (
-					<BudgetLedgerEntry key={index} {...ledgerEntry} />
+				<BudgetLedgerEntry key={index} {...ledgerEntry} />
 			)
 		})
 
