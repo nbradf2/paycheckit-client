@@ -1,9 +1,9 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import BudgetCard from './budgetCard';
+import BudgetDetails from './budgetDetails';
 
-describe('<BudgetCard />', () => {
+describe('<BudgetDetails />', () => {
 	let seedLists = [];
 	beforeAll(() => {
 		for (let i=0; i < 10; i++) {
@@ -12,6 +12,6 @@ describe('<BudgetCard />', () => {
 	});
 	
 	it('Renders without crashing', () => {
-		shallow(<BudgetCard />);
+		shallow(<BudgetDetails />);
 	})
 })
