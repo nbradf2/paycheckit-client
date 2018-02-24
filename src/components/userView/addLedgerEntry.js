@@ -31,7 +31,7 @@ export class AddLedgerEntry extends React.Component {
 		this.amountInput.value = '';
 		this.labelInput.value = '';
 		this.type.value = '';
-		{/*ADD DISPATCH HERE TO DATABASE*/}
+		//ADD DISPATCH HERE TO DATABASE
 	}
 
 	setEditing(editing) {

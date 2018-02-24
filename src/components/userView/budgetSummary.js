@@ -22,7 +22,6 @@ export default function BudgetSummary(props) {
 }
 
 BudgetSummary.defaultProps = {
-	startingBalance: 0,
 	month: 2,
 	year: 25,
 	startingBalance: 2018,
