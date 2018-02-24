@@ -23,6 +23,12 @@ export const updateSummaries = (ledger) => {
 	let summary = [];
 	let monthlyBudget = createMonthly();
 	let endingBalance = 0;
+	if (ledger.length === 0) {
+		return ({
+			type: UPDATE_SUMMARIES,
+			summary
+		})
+	}
 
 	let currentMonth = ledger[0].month;
 	let currentYear = ledger[0].month;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
 import NavBarPublic from './navBarPublic';
 import Hero from './hero';
 import About from './about';
@@ -28,7 +28,7 @@ export default function LandingPage(props) {
 				<Hero />
 				<About />
 				<LoginForm />
-				{/*<Route exact path="/register" component={Register}/>*/}
+				<Register />
 				<UserHome />
 				<Footer />
 			</div>

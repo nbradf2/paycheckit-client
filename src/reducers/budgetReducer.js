@@ -64,7 +64,7 @@ const initialState = {
 			category: 'Credit Card'
 		}
 	],
-	monthSummaries: [],
+	monthlySummaries: [],
 	ledgerEntry: {
 		id: null,
 		month: null,
@@ -89,7 +89,7 @@ export default function budgetReducer(state=initialState, action ) {
 			monthlySummaries: action.summary
 		})
 	}
-
+	console.log(state);
 	return state;
 }
 
