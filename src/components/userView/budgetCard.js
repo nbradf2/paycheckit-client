@@ -2,19 +2,22 @@ import React from 'react';
 import {connect} from 'react-redux';
 import BudgetLedgerEntry from './budgetLedgerEntry';
 import AddLedgerEntry from './addLedgerEntry';
+import BudgetSummary from './budgetSummary';
 import {addLedgerEntry, updateSummaries} from './../../actions/budgetActions'
 import './budgetCard.css';
 
+// use BudgetDetails for code example to eventually map through summaries
 
 export class BudgetCard extends React.Component {
 	componentWillMount() {
-		this.props.dispatch(updateSummaries(this.props.ledgerEntries));
+		this.props.dispatch(updateSummaries(this.props.monthlySummaries));
 	}
+
 	// map over SUMMARIES instead of ENTRIES
 	render() {
-		const ledgerEntries = this.props.ledgerEntries.map((ledgerEntry, index) => {
+		const monthlySummaries = this.props.monthlySummaries.map((summary, index) => {
 			return (
-				<BudgetLedgerEntry key={index} {...ledgerEntry} />
+				<BudgetSummary key={index} {...summary} />
 			)
 		})
 
@@ -22,7 +25,7 @@ export class BudgetCard extends React.Component {
 			<div>
 				<h3>My Budget Entries</h3>
 				<div>
-					{ledgerEntries}
+					{monthlySummaries}
 					<AddLedgerEntry />
 				</div>
 			</div>
@@ -31,7 +34,7 @@ export class BudgetCard extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	ledgerEntries: state.ledgerEntries
+	monthlySummaries: state.monthlySummaries
 })
 
 export default connect(mapStateToProps)(BudgetCard);

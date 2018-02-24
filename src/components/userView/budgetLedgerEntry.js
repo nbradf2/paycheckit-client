@@ -21,7 +21,7 @@ BudgetLedgerEntry.defaultProps = {
 	day: 25,
 	year: 2018,
 	amount: 75,
-	label: 'Visa',
+	label: 'MasterCard',
 	type: 'income',
 	category: 'credit card'
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import BudgetCard from './budgetCard';
+import BudgetDetails from './budgetDetails';
 import './budgetBoard.css';
 
 export default function BudgetBoard(props) {
@@ -11,6 +12,7 @@ export default function BudgetBoard(props) {
 			<h2>My Budgets</h2>
 			<ul>
 				<BudgetCard />
+				<BudgetDetails />
 			</ul>
 		</div>
 	);
