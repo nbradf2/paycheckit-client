@@ -28,25 +28,25 @@ export class Register extends React.Component {
 				)}>
 				<h2>Register</h2>
 				<div className="input">
-					<label htmlFor="firstName" hidden>First Name</label>
+					<label htmlFor="firstName">First Name</label>
 					<Field component={Input} type="text" name="firstName" id="firstName" placeholder="First Name"/>
-					<label htmlFor="lastName" hidden>Last Name</label>
+					<label htmlFor="lastName">Last Name</label>
 					<Field component={Input} type="text" name="lastName" id="lastName" placeholder="Last Name"/>
-					<label htmlFor="username" hidden>Username</label>
+					<label htmlFor="username">Username</label>
 					<Field 
 						component={Input}
 						type="text"
 						name="username"
 						validate={[required, nonEmpty, isTrimmed]}
 					/>
-					<label htmlFor="password" hidden>Password</label>
+					<label htmlFor="password">Password</label>
 					<Field 
 						component={Input}
 						type="password"
 						name="password"
 						validate={[required, passwordLength, isTrimmed]}
 					/>
-					<label htmlFor="passwordConfirm" hidden>Confirm Password</label>
+					<label htmlFor="passwordConfirm">Confirm Password</label>
 					<Field 
 						component={Input}
 						type="password"
