@@ -1,4 +1,8 @@
 import React from 'react';
+import {Field, reduxForm, focus} from 'redux-form';
+import {registerUser} from '../actions/users'
+
+
 import {Link} from 'react-router-dom';
 import './register.css';
 
