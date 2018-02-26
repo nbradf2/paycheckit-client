@@ -29,9 +29,9 @@ export class Register extends React.Component {
 				<h2>Register</h2>
 				<div className="input">
 					<label htmlFor="firstName">First Name</label>
-					<Field component={Input} type="text" name="firstName" id="firstName" placeholder="First Name"/>
+					<Field component={Input} type="text" name="firstName" id="firstName"/>
 					<label htmlFor="lastName">Last Name</label>
-					<Field component={Input} type="text" name="lastName" id="lastName" placeholder="Last Name"/>
+					<Field component={Input} type="text" name="lastName" id="lastName"/>
 					<label htmlFor="username">Username</label>
 					<Field 
 						component={Input}
