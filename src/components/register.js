@@ -51,6 +51,7 @@ export class Register extends React.Component {
 						component={Input}
 						type="password"
 						name="passwordConfirm"
+						validate={[required, nonEmpty, matchesPassword]}
 					/>
 					</div>
 					<button 
