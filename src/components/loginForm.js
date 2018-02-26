@@ -1,19 +1,62 @@
 import React from 'react';
+import {Field, reduxForm, focux} from 'redux-form';
+import Input from './input';
+import {login} from '../actions/auth';
+import {required, nonEmpty} from '../validators';
 import {Link} from 'react-router-dom';
 import './loginForm.css';
 
-export default function LoginForm(props) {
-	return(
-		<form id="loginForm">
-			<h2>Log In</h2>
-			<div className="input">
-				<label htmlFor="username" hidden>Username</label>
-				<input type="text" name="username" id="username" placeholder="Username"/>
-				<label htmlFor="password" hidden>Password</label>
-				<input type="text" name="password" id="password" placeholder="Password"/>
-			</div>
-			<button type="submit">Submit</button>
-			<p>Not a registered user?  Click <Link to={'/register'}>here</Link>!</p>
-		</form>
-	);
-} 
+export class LoginForm extends React.Component {
+	onSubmit(values) {
+		return this.props.dispatch(login(values.username, values.password));
+	}
+
+	render () {
+		let error;
+		if (this.props.error) {
+			error = (
+				<div className="form-error" aria-live="polite">
+					{this.props.error}
+				</div>
+			);
+		}
+
+		return (
+			<form
+				className="login-form"
+				id="loginForm"
+				onSubmit={this.props.handleSubmit(values =>
+					this.onSubmit(values)
+				)}>
+				<h2>Log In</h2>
+				<div className="input">
+					{error}
+					<label htmlFor="username">Username</label>
+					<Field 
+						component={Input}
+						type="text"
+						name="username"
+						id="username"
+						validate={[required, nonEmpty]}
+					/>
+					<label htmlFor="password">Password</label>
+					<Field 
+						component={Input}
+						type="text"
+						name="username"
+						id="password"
+						validate={[required, nonEmpty]}
+					/>
+				</div>
+				<button disabled={this.props.pristine || this.props.submitting}>Log in</button>
+				<p>Not a registered user?  Click <Link to={'/register'}>here</Link>!</p>
+			</form>
+		)
+	}
+}
+
+export default reduxForm({
+	form: 'login',
+	onSubmitFail: (errors, dispatch) => 
+		dispatch(focus('login', username))
+})(LoginForm);
