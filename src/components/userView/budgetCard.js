@@ -30,7 +30,7 @@ export class BudgetCard extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	monthlySummaries: state.monthlySummaries
+	monthlySummaries: state.budget.monthlySummaries
 })
 
 export default connect(mapStateToProps)(BudgetCard);

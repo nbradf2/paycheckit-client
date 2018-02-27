@@ -31,7 +31,7 @@ export class BudgetDetails extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	ledgerEntries: state.ledgerEntries
+	ledgerEntries: state.budget.ledgerEntries
 })
 
 export default connect(mapStateToProps)(BudgetDetails);
