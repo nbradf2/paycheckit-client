@@ -84,12 +84,11 @@ export default function budgetReducer(state=initialState, action ) {
 		});
 	}
 
-	if (action.type === UPDATE_SUMMARIES) {
+	else if (action.type === UPDATE_SUMMARIES) {
 		return Object.assign({}, state, {
 			monthlySummaries: action.summary
 		})
 	}
-	console.log(state);
 	return state;
 }
 

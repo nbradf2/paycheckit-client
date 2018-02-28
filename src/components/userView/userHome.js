@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import NavBarUser from './navBarUser';
 import BudgetBoard from './budgetBoard';
 import './userHome.css';
