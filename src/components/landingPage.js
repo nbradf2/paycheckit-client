@@ -42,15 +42,17 @@ export class LandingPage extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<NavBarPublic />
-				<Hero />
-				<About />
-				<LoginForm />
-				<Route exact path="/register" component={Register} />
-				<Route exact path="/userHome" component={UserHome} />
-				<Footer />
-			</div>
+			<Router>
+				<div>
+					<NavBarPublic />
+					<Hero />
+					<About />
+					<LoginForm />
+					<Route exact path="/register" component={Register} />
+					<Route exact path="/userHome" component={UserHome} />
+					<Footer />
+				</div>
+			</Router>
 		)
 	}
 }
