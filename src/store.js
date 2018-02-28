@@ -12,7 +12,7 @@ const store = createStore(
 		form: formReducer,
 		auth: authReducer,
 		protectedData: protectedDataReducer,
-		budget: budgetReducer,
+		budget: budgetReducer
 	}), 
 	applyMiddleware(thunk),
 	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
