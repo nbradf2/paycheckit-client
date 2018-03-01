@@ -59,6 +59,7 @@ export class LandingPage extends React.Component {
 				<LoginForm />
 				<Route exact path="/register" component={Register} />
 				<Route exact path="/userHome" component={UserHome} />
+				<UserHome />
 				<Footer />
 			</div>
 		)
