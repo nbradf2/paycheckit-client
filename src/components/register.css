@@ -3,8 +3,8 @@
 	color: #F6F6FA;
 	text-align: center;
 	margin-top: 5rem;
-	padding-top: 5rem;
-	/*height: 100vh;*/
+	padding-top: 8rem;
+	height: 100vh;
 }
 
 #registerForm a {
@@ -50,4 +50,10 @@
 .input {
 	width: 20em;
 	margin: 1rem auto;
+}
+
+@media only screen and (max-width: 843px) {
+	#registerForm {
+		margin-top: 10rem;
+	}
 }
