@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import BudgetLedgerEntry from './budgetLedgerEntry';
 import AddLedgerEntry from './addLedgerEntry';
-import {updateSummaries} from './../../actions/budgetActions'
+import {updateSummaries} from './../../actions/budgetActions';
 import './budgetCard.css';
 
 // shows individual ledger entries by month

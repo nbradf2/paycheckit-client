@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './about.css'
 
 export default function About(props) {
@@ -10,7 +11,8 @@ export default function About(props) {
 			<p className="col-6">Got paid? <i className="fa fa-money"></i></p>
 			<p className="col-6">Paid a bill? <i className="fa fa-credit-card"></i></p>
 			<p className="col-12">Check it off!<i className="fa fa-check-square"></i></p>	
-			<a href="#loginForm"><i className="fa fa-angle-double-down" data-fa-transform="down-10"></i></a>
+			<button><Link to="/loginForm">Log in</Link></button>
+			<button><Link to="/registration-page">Register</Link></button>
 		</div>
 	);
 }
