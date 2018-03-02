@@ -6,6 +6,7 @@ import Hero from './hero';
 import About from './about';
 import LoginForm from './loginForm';
 import RegistrationPage from './registration-page';
+import UserHome from './userView/userHome';
 // import {refreshAuthToken} from '../actions/auth';
 import './landingPage.css';
 
@@ -13,24 +14,15 @@ export function LandingPage(props) {
 	if (props.loggedIn) {
 		return <Redirect to="/userHome" />
 	}
-	const links = [{
-		text: 'About',
-		href: '#about'
-	}, {
-		text: 'Login',
-		href: '#loginForm'
-	}, {
-		text: 'Register',
-		href: '#register'
-	}]
 	return (
 		<div>
-			<NavBarPublic title="PaycheckIt" links={links}/>
+			<NavBarPublic />
 			<Hero />
 			<About />
 			<Switch>
-				<LoginForm exact path="/loginForm" component={LoginForm} />
+				<Route exact path="/loginForm" component={LoginForm} />
 				<Route exact path="/registrationPage" component={RegistrationPage} />
+				<Route exact path="/userHome" component={UserHome} />
 			</Switch>
 		</div>
 	)

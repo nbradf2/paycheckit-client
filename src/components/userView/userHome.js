@@ -5,24 +5,14 @@ import NavBarUser from './navBarUser';
 import BudgetBoard from './budgetBoard';
 import './userHome.css';
 
-export function UserHome(props) {}
-
-	render() {
-		const links = [{
-			text: 'My Budget',
-			href: '#myBudget'
-		}, {
-			text: 'Add Budget',
-			href: '#addBudget'
-		}]
-		return (
-			<div className="userHome">
-				<NavBarUser title="PaycheckIt" links={links}/>
-				<div>Hello, {this.props.name}!</div>
-				<BudgetBoard />
-			</div>
-		);
-	}
+export function UserHome(props) {
+	return (
+		<div className="userHome">
+			<NavBarUser />
+			<div>Hello, {props.name}!</div>
+			<BudgetBoard />
+		</div>
+	);
 }
 
 const mapStateToProps = state => {

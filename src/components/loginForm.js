@@ -1,19 +1,24 @@
 import React from 'react';
-// import {connect} from 'react-redux';
+import {connect} from 'react-redux';
 import {Field, reduxForm, focus} from 'redux-form';
 import Input from './input';
 import {login} from '../actions/auth';
 import {required, nonEmpty} from '../validators';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import './loginForm.css';
 
-export class LoginForm extends React.Component {
+class LoginFormComponent extends React.Component {
 	onSubmit(values) {
+		console.log(values)
 		return this.props.dispatch(login(values.username, values.password));
 	}
 
 	render () {
 		let error;
+		if (this.props.loggedIn) {
+			return <Redirect to="/userHome" />
+		}
+
 		if (this.props.error) {
 			error = (
 				<div className="form-error" aria-live="polite">
@@ -55,6 +60,12 @@ export class LoginForm extends React.Component {
 		)
 	}
 }
+
+const mapStateToProps = state => ({
+	loggedIn: state.auth.currentUser !== null
+});
+
+export const LoginForm = connect(mapStateToProps)(LoginFormComponent);
 
 export default reduxForm({
 	form: 'login',

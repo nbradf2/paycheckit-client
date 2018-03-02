@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import {clearAuth} from './../actions/auth';
 import {clearAuthToken} from './../local-storage';
 import './navBarPublic.css';
@@ -11,13 +12,6 @@ export class NavBarPublic extends React.Component {
 	}
 
 	render() {
-		const links = this.props.links.map((link, index) => {
-			<li key={index} className="nav-links">
-				<a href={link.href}>
-					{link.text}
-				</a>
-			</li>
-		});
 
 		let logOutButton;
 		if (this.props.loggedIn) {
@@ -30,7 +24,11 @@ export class NavBarPublic extends React.Component {
 			<div className="row nav-bar-public row">
 				<h1 className="col-6">PaycheckIt</h1>
 				<nav className="col-6 nav-public">
-					<ul id="menu">{links}</ul>
+					<ul id="menu">
+						<Link to="/about">About</Link>
+						<Link to="/loginForm">Log in</Link>
+						<Link to="/registrationPage">Register</Link>
+					</ul>
 					{logOutButton}
 				</nav>
 			</div>

@@ -10,7 +10,9 @@ export function RegistrationPage(props) {
 	}
 
 	return (
-		<Register />
+		<div>
+			<Register />
+		</div>
 	);
 }
 

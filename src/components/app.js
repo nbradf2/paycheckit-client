@@ -1,7 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Route, Switch, withRouter} from 'react-router-dom';
-import LandingPage from './landingPage'
+import LandingPage from './landingPage';
+import NavBarPublic from './navBarPublic';
+import RegistrationPage from './registration-page';
+import LoginForm from './loginForm';
 import UserHome from './userView/userHome';
 import Footer from './footer';
 import {refreshAuthToken} from '../actions/auth';
@@ -39,8 +42,11 @@ export class App extends React.Component {
 	render() {
 		return (
 			<div>
+				<NavBarPublic />
 				<Switch>
-					<Route exact path="/landingPage" component={LandingPage} />
+					<Route exact path="/" component={LandingPage} />
+					<Route exact path="/registrationPage" component={RegistrationPage} />
+					<Route exact path="/loginForm" component={LoginForm} />
 					<Route exact path="/userHome" component={UserHome} />
 				</Switch>
 				<Footer />
