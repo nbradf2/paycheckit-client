@@ -15,6 +15,10 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	font-weight: bold;
+}
+
 a:visited {
-	color: #ED6A5A;
+	color: #21434B;
 }

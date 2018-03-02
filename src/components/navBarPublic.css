@@ -1,5 +1,3 @@
-/*ORIGINAL CSS*/
-
 .nav-bar-public {
 	padding: 1rem;
 	background-color: #F6F6FA;
@@ -16,6 +14,21 @@
 
 #menu a {
 	margin-right: 1rem;
+	font-size: 1.5rem;
+}
+
+.nav-public button {
+	margin-right: 1rem;
+	font-family: 'Lato', sans-serif;
+	font-size: 1rem;
+	background-color: #21343B;
+	color: #F6F6FA;
+	border: 1px solid #21343B;
+	border-radius: 5px;
+	height: 1.4rem;
+	width: 6rem;
+	cursor: pointer;
+
 }
 
 @media only screen and (max-width: 843px) {
@@ -26,145 +39,8 @@
 	}
 
 	.nav-public {
-		/*margin-top: 1rem;*/
 		text-align: center;
 		border-top: 1px solid #21434B;
 	}
 }
-
-/*HAMBURGER SLIDE IN RIGHT*/
-
-/*.nav-bar-public {
-	margin: 0;
-	padding: 0;
-	color: #21434B;
-	overflow-x: hidden;
-	background-color: #F6F6FA;
-}
-
-.nav-bar-public a {
-	transition: color 0.3s ease;
-}
-
-.nav-bar-public a:hover {
-	color: tomato;
-}
-
-#menuToggle {
-	display: block;
-	position: absolute;
-	top: 35px;
-	right: 50px;
-	z-index: 1;
-	-webkit-user-select: none;
-	user-select: none;
-}
-
-#menuToggle input {
-	display: block;
-	width: 40px;
-	height: 32px;
-	position: absolute;
-	top: -7px;
-	left: -5px;
-	cursor: pointer;
-	opacity: 0;
-	z-index: 2;
-	-webkit-touch-callout: none;
-}
-
-#menuToggle span {
-	display: block;
-	width: 33px;
-	height: 4px;
-	margin-bottom: 5px;
-	position: relative;
-	background: #21434B;
-	border-radius: 3px;
-	z-index: 1;
-	transform-origin: 4px 0px;
-	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-				background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-				opacity 0.55 ease;
-}
-
-#menuToggle span:first-child {
-	transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-	transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span {
-	opacity: 1;
-	transform: rotate(45deg) translate(-2px, -1px);
-	background: #21434B;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3) {
-	opacity: 0;
-	transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2) {
-	opacity: 1;
-	transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menu {
-	position: absolute;
-	width: 1600px;
-	overflow: hidden;
-	margin: -100px 0 0 0;
-	padding: 30px;
-	margin-top: 25px;
-	text-align: right;
-	right: -50px;
-	background: #F6F6FA;
-	list-style-type: none;
-	-webkit-font-smoothing: antialiased;
-	transform-origin: 0% 0%;
-	transform: translate(100%, 0);
-	transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li {
-	padding: 10px 0;
-	font-size: 22px;
-}
-
-#menuToggle input:checked ~ ul {
-	transform: scale(1.0, 1.0);
-	opacity: 1;
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
