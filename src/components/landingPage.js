@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Route, withRouter} from 'react-router-dom';
+import {Route, Switch, withRouter} from 'react-router-dom';
 import NavBarPublic from './navBarPublic';
 import Hero from './hero';
 import About from './about';
@@ -56,10 +56,12 @@ export class LandingPage extends React.Component {
 				<NavBarPublic title="PaycheckIt" links={links}/>
 				<Hero />
 				<About />
-				<LoginForm />
-				<Route exact path="/register" component={Register} />
-				<Route exact path="/userHome" component={UserHome} />
-				<UserHome />
+				<Switch>
+					<LoginForm exact path="/loginForm" component={LoginForm}/>
+					<Route exact path="/register" component={Register} />
+					<Route exact path="/userHome" component={UserHome} />
+				</Switch>
+				
 				<Footer />
 			</div>
 		)

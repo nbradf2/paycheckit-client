@@ -49,7 +49,7 @@ export class LoginForm extends React.Component {
 					/>
 				</div>
 				<button disabled={this.props.pristine || this.props.submitting}>Log in</button>
-				<p>Not a registered user?  Click <Link to={'/register'}>here</Link>!</p>
+				<p>Not a registered user?  Click <Link to='/register'>here</Link>!</p>
 			</form>
 		)
 	}
