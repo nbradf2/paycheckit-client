@@ -22,10 +22,9 @@ export class NavBarPublic extends React.Component {
 
 		return (
 			<div className="row nav-bar-public row">
-				<h1 className="col-6">PaycheckIt</h1>
+				<h1 className="col-6"><Link to="/">PaycheckIt</Link></h1>
 				<nav className="col-6 nav-public">
 					<ul id="menu">
-						<Link to="/about">About</Link>
 						<Link to="/loginForm">Log in</Link>
 						<Link to="/registrationPage">Register</Link>
 					</ul>
