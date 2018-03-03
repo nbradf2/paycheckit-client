@@ -1,5 +1,8 @@
 .userHome {
 	min-height: 100vh;
+	margin-top: 5rem;
+	padding-top: 5rem;
+	padding-bottom: 1rem;
 	background-color: #21434B;
 	color: #F6F6FA;
 }

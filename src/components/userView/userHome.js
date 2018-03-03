@@ -8,7 +8,7 @@ import './userHome.css';
 export function UserHome(props) {
 	return (
 		<div className="userHome">
-			<NavBarUser />
+			{/*<NavBarUser />*/}
 			<div>Hello, {props.name}!</div>
 			<BudgetBoard />
 		</div>
