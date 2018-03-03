@@ -1,4 +1,4 @@
-import {ADD_LEDGER_ENTRY, UPDATE_SUMMARIES} from '../actions/budgetActions';
+import * as actions from '../actions/budgetActions';
 // removed LEDGERS - find this and remove
 
 const initialState = {
@@ -78,16 +78,19 @@ const initialState = {
 }
 
 export default function budgetReducer(state=initialState, action ) {
-	if (action.type === ADD_LEDGER_ENTRY) {
+	if (action.type === actions.ADD_LEDGER_ENTRY) {
 		return Object.assign({}, state, {
 			ledgerEntries: [...state.ledgerEntries, action.ledgerEntry]
 		});
 	}
 
-	else if (action.type === UPDATE_SUMMARIES) {
+	else if (action.type === actions.UPDATE_SUMMARIES) {
 		return Object.assign({}, state, {
 			monthlySummaries: action.summary
 		})
+	}
+	else if (action.type === actions.FETCH_BOARD_SUCCESS) {
+		return action.board;
 	}
 	return state;
 }
