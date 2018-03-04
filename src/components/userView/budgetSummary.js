@@ -4,10 +4,6 @@ import './budgetSummary.css';
 export default function BudgetSummary(props) {
 	console.log(typeof(props.income))
 	console.log(props.income)
-
-
-
-
 	return (
 		<div >
 			<h2>{props.month} {props.year}</h2>
