@@ -1,3 +1,5 @@
+import {API_BASE_URL} from '../config';
+
 export const ADD_LEDGER_ENTRY = 'ADD_LEDGER_ENTRY';
 export const addLedgerEntry = (ledgerEntry) => ({
 	type: ADD_LEDGER_ENTRY,
@@ -61,28 +63,24 @@ export const updateSummaries = (ledger) => {
 
 }
 
-// FETCH LEDGER will 
-// GETLEDGER, POSTLEDGER, etc.
-// want multiple places of access
+export const FETCH_BOARD_SUCCESS = 'FETCH_BOARD_SUCCESS';
+export const fetchBoardSuccess = budget => ({
+	type: FETCH_BOARD_SUCCESS,
+	budget
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export const fetchBoard = () => dispatch => {
+	fetch (`${API_BASE_URL}/budget`)
+		.then(res => {
+			if(!res.ok) {
+				return Promise.reject(res.statusText);
+			}
+			return res.json();
+		})
+		.then(budget => {
+			dispatch(fetchBoardSuccess(budget));
+		});
+};
 
 
 

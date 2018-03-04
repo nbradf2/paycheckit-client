@@ -1,14 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import requiresLogin from '../requires-login';
-import NavBarUser from './navBarUser';
 import BudgetBoard from './budgetBoard';
 import './userHome.css';
 
 export function UserHome(props) {
 	return (
 		<div className="userHome">
-			{/*<NavBarUser />*/}
 			<div>Hello, {props.name}!</div>
 			<BudgetBoard />
 		</div>
