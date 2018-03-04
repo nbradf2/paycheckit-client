@@ -24,11 +24,12 @@ export class AddLedgerEntry extends React.Component {
 		ledgerEntry.type = this.type.value;
 		
 		this.props.dispatch(addLedgerEntry(ledgerEntry));
+		this.props.dispatch(updateSummaries(this.props.ledger));
 
 		this.monthInput.value = '';
 		this.dayInput.value = '';
 		this.yearInput.value = '';
-		this.amountInput.value = '';
+		this.amountInput.value = 0;
 		this.labelInput.value = '';
 		this.type.value = '';
 		//ADD DISPATCH HERE TO DATABASE
@@ -92,4 +93,8 @@ export class AddLedgerEntry extends React.Component {
 	}
 }
 
-export default connect()(AddLedgerEntry);
+const mapStateToProps = state => ({
+	ledger: state.budget.ledgerEntries
+})
+
+export default connect(mapStateToProps)(AddLedgerEntry);
