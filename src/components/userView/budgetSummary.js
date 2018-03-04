@@ -2,6 +2,8 @@ import React from 'react';
 import './budgetSummary.css';
 
 export default function BudgetSummary(props) {
+	
+
 	return (
 		<div >
 			<h2>{props.month} {props.year}</h2>

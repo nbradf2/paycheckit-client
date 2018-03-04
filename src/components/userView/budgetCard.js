@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import AddLedgerEntry from './addLedgerEntry';
 import BudgetSummary from './budgetSummary';
 import {updateSummaries} from './../../actions/budgetActions'
 import './budgetCard.css';
@@ -19,10 +18,9 @@ export class BudgetCard extends React.Component {
 
 		return (
 			<div>
-				<h3>My Budget Entries</h3>
+				<h3>My Budget Summaries</h3>
 				<div>
 					{monthlySummaries}
-					<AddLedgerEntry />
 				</div>
 			</div>
 		);
