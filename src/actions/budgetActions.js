@@ -47,7 +47,7 @@ export const updateSummaries = (ledger) => {
 			monthlyBudget.month = ledger[i].month;
 			monthlyBudget.year = ledger[i].year;
 			currentMonth = monthlyBudget.month;
-		}
+		} 
 		if (ledger[i].amount > 0) {
 		  monthlyBudget.income += ledger[i].amount;
 		} else {
