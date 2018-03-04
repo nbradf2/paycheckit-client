@@ -2,7 +2,8 @@ import React from 'react';
 import './budgetSummary.css';
 
 export default function BudgetSummary(props) {
-	
+	console.log(typeof(props.income))
+	console.log(props.income)
 
 	return (
 		<div >
@@ -23,11 +24,11 @@ export default function BudgetSummary(props) {
 	)
 }
 
-BudgetSummary.defaultProps = {
-	month: 2,
-	year: 25,
-	startingBalance: 2018,
-	income: 75,
-	expenses: 'Visa',
-	endingBalance: 'income',
-}
+// BudgetSummary.defaultProps = {
+// 	month: 2,
+// 	year: 25,
+// 	startingBalance: 2018,
+// 	income: 75,
+// 	expenses: 'Visa',
+// 	endingBalance: 'income',
+// }
