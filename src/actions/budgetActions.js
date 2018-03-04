@@ -53,6 +53,7 @@ export const updateSummaries = (ledger) => {
 		} else {
 		  monthlyBudget.expenses += ledger[i].amount;
 		}
+		
 	}
 	summary.push(monthlyBudget);
 

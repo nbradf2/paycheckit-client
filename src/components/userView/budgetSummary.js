@@ -30,5 +30,5 @@ export default function BudgetSummary(props) {
 // 	startingBalance: 100,
 // 	income: 75,
 // 	expenses: 'Visa',
-// 	endingBalance: 'income',
+// 	endingBalance: 25,
 // }
