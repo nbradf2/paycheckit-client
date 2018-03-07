@@ -94,25 +94,25 @@ export const getBudget = () => (dispatch, getState) => {
 	fetch(`${API_BASE_URL}/budget`, {
 		method: 'GET',
 		headers: {
-			Authorization: `Bearer ${authToken}`
+			Authorization: `Bearer ${authToken}`		
 		},
-		contentType: 'application/json',
 		success: function(userData) {
 			console.log(userData);
 		}
 	});
 }
 
-export const postBudget = () => (dispatch, getState) => {
+export const postBudget = (ledgerEntry) => (dispatch, getState) => {
 	const authToken = getState().auth.authToken;
 	fetch(`${API_BASE_URL}/budget`, {
 		method: 'POST',
 		headers: {
-			Authorization: `Bearer ${authToken}`
+			Authorization: `Bearer ${authToken}`,
+			'Content-Type': 'application/json'			
 		},
-		contentType: 'application/json',
-		success: function(userData) {
-			console.log(userData);
+		body: JSON.stringify(ledgerEntry),
+		success: function(data) {
+			console.log(data);
 		}
 	})
 }
