@@ -70,8 +70,14 @@ export const fetchBoardSuccess = budget => ({
 	budget
 });
 
-export const fetchBoard = () => dispatch => {
-	fetch (`${API_BASE_URL}/budget`)
+export const fetchBoard = () => (dispatch, getState) => {
+	const authToken = getState().auth.authToken;
+	fetch (`${API_BASE_URL}/budget`, {
+		method: 'GET',
+		headers: {
+			Authorization: `Bearer ${authToken}`
+		}
+	})
 		.then(res => {
 			if(!res.ok) {
 				return Promise.reject(res.statusText);
@@ -83,10 +89,31 @@ export const fetchBoard = () => dispatch => {
 		});
 };
 
+export const getBudget = () => (dispatch, getState) => {
+	const authToken = getState().auth.authToken;
+	fetch(`${API_BASE_URL}/budget`, {
+		method: 'GET',
+		headers: {
+			Authorization: `Bearer ${authToken}`
+		},
+		contentType: 'application/json',
+		success: function(userData) {
+			console.log(userData);
+		}
+	});
+}
 
-
-
-
-
-
+export const postBudget = () => (dispatch, getState) => {
+	const authToken = getState().auth.authToken;
+	fetch(`${API_BASE_URL}/budget`, {
+		method: 'POST',
+		headers: {
+			Authorization: `Bearer ${authToken}`
+		},
+		contentType: 'application/json',
+		success: function(userData) {
+			console.log(userData);
+		}
+	})
+}
 

@@ -2,7 +2,8 @@ import React from 'react';
 import './addLedgerEntry.css';
 import {connect} from 'react-redux';
 import {addLedgerEntry} from './../../actions/budgetActions'
-import {updateSummaries} from './../../actions/budgetActions'
+import {updateSummaries} from './../../actions/budgetActions';
+import {postBudget} from './../../actions/budgetActions';
 
 export class AddLedgerEntry extends React.Component {
 	constructor(props) {
@@ -33,7 +34,8 @@ export class AddLedgerEntry extends React.Component {
 		this.amountInput.value = 0;
 		this.labelInput.value = '';
 		this.type.value = '';
-		//ADD DISPATCH HERE TO DATABASE
+		
+		this.props.dispatch(postBudget(this.props.ledger));
 	}
 
 	setEditing(editing) {
