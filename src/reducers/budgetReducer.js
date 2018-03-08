@@ -29,7 +29,9 @@ export default function budgetReducer(state=initialState, action ) {
 		})
 	}
 	else if (action.type === actions.FETCH_BOARD_SUCCESS) {
-		return action.budget;
+		return Object.assign({}, state, {
+			ledgerEntries: action.budget
+		})
 	}
 	return state;
 }

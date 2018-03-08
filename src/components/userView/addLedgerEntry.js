@@ -11,7 +11,6 @@ export class AddLedgerEntry extends React.Component {
 		this.state = {
 			editing: false
 		}
-
 		this.onSubmit = this.onSubmit.bind(this);
 	}
 
@@ -35,7 +34,7 @@ export class AddLedgerEntry extends React.Component {
 		this.labelInput.value = '';
 		this.type.value = '';
 		
-		this.props.dispatch(postBudget(this.props.ledger));
+		this.props.dispatch(postBudget(ledgerEntry));
 	}
 
 	setEditing(editing) {
