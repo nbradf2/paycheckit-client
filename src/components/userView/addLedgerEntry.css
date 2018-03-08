@@ -1,3 +1,10 @@
+.add-button button {
+	font-family: 'Lato', sans-serif;
+	width: 4rem;
+	height: 2rem;
+	border-radius: 3px;
+}
+
 #addLedgerEntry {
 	text-align: center;
 	background-color: #F6F6FA;
