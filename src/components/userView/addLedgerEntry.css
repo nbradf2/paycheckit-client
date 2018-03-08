@@ -1,7 +1,7 @@
 #addLedgerEntry {
 	text-align: center;
 	background-color: #F6F6FA;
-	width: 100%;
+	width: 50%;
 	padding-top: 5rem;
 	color: #21434B;
 }
@@ -15,7 +15,7 @@
 	border: none;
 	border-bottom: 1px solid #21434B;
 	padding-top: 1.5rem;
-	text-align: center;
+	/*text-align: center;*/
 }
 
 #addLedgerEntry input[type="radio"] {
@@ -40,6 +40,13 @@
 	background-color: #21434B;
 	border: 1px solid #F6F6FA;
 	width: 15rem;
+}
+
+#month,
+#day,
+#year {
+	display: inline;
+	width: 33%
 }
 
 .income,

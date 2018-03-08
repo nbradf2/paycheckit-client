@@ -55,7 +55,7 @@ export class AddLedgerEntry extends React.Component {
 
 		return (
 			<form id="addLedgerEntry" className="row" onSubmit={this.onSubmit}>
-				<div className="input col-9">
+				<div className="col-12">
 					<h2>Add Item</h2>
 					<label htmlFor="month" hidden>Month</label>
 					<input type="number" min="1" max="12" name="month" id="month" ref={input => this.monthInput=input} placeholder="month"/>

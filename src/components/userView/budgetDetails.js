@@ -19,7 +19,7 @@ export class BudgetDetails extends React.Component {
 		})
 
 		return (
-			<div>
+			<div className="budgetDetails">
 				<h3>My Budget Entries</h3>
 				<div>
 					{ledgerEntries}
