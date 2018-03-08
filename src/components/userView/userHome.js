@@ -7,7 +7,7 @@ import './userHome.css';
 export function UserHome(props) {
 	return (
 		<div className="userHome">
-			<div>Hello, {props.name}!</div>
+			<div className="userHello">Hello, {props.name}!</div>
 			<BudgetBoard />
 		</div>
 	);

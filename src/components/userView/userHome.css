@@ -10,3 +10,13 @@
 .userHome h2 {
 	text-align: center;
 }
+
+.userHome .userHello {
+	margin: 1rem;
+}
+
+@media only screen and (max-width: 843px) {
+	.userHome {
+		margin-top: 10rem;
+	}
+}
