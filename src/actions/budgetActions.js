@@ -73,23 +73,23 @@ export const fetchBoardSuccess = budget => ({
 	budget
 });
 
-export const fetchBoard = () => (dispatch, getState) => {
+export const fetchBoard = (user) => (dispatch, getState) => {
 	const authToken = getState().auth.authToken;
-	fetch (`${API_BASE_URL}/budget`, {
+	fetch (`${API_BASE_URL}/budget/${user}`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ${authToken}`
 		}
 	})
-		.then(res => {
-			if(!res.ok) {
-				return Promise.reject(res.statusText);
-			}
-			return res.json();
-		})
-		.then(budget => {
-			dispatch(fetchBoardSuccess(budget));
-		});
+	.then(res => {
+		if(!res.ok) {
+			return Promise.reject(res.statusText);
+		}
+		return res.json();
+	})
+	.then(budget => {
+		dispatch(fetchBoardSuccess(budget));
+	});
 };
 
 export const getBudget = () => (dispatch, getState) => {
@@ -118,5 +118,14 @@ export const postBudget = (ledgerEntry) => (dispatch, getState) => {
 			console.log(`POST succeeded: ${data}`);
 		}
 	})
+	.then(res => {
+		if(!res.ok) {
+			return Promise.reject(res.statusText);
+		}
+		return res.json();
+	})
+	.then(budget => {
+		dispatch(fetchBoardSuccess(budget));
+	});
 }
 

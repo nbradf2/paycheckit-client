@@ -1,9 +1,7 @@
 import React from 'react';
 import './addLedgerEntry.css';
 import {connect} from 'react-redux';
-import {addLedgerEntry} from './../../actions/budgetActions'
-import {updateSummaries} from './../../actions/budgetActions';
-import {postBudget} from './../../actions/budgetActions';
+import {addLedgerEntry, updateSummaries, fetchBoard, postBudget} from './../../actions/budgetActions'
 
 export class AddLedgerEntry extends React.Component {
 	constructor(props) {
@@ -17,6 +15,7 @@ export class AddLedgerEntry extends React.Component {
 	onSubmit(event) {
 		event.preventDefault();
 		let ledgerEntry = {};
+		ledgerEntry.user = this.props.user;
 		ledgerEntry.month = this.monthInput.value;
 		ledgerEntry.day = this.dayInput.value;
 		ledgerEntry.year = this.yearInput.value;
@@ -24,8 +23,8 @@ export class AddLedgerEntry extends React.Component {
 		ledgerEntry.label = this.labelInput.value;
 		ledgerEntry.amountType = this.amountTypeInput.value;
 		
-		this.props.dispatch(addLedgerEntry(ledgerEntry));
-		this.props.dispatch(updateSummaries(this.props.ledger));
+		// this.props.dispatch(addLedgerEntry(ledgerEntry));
+		
 
 		this.monthInput.value = '';
 		this.dayInput.value = '';
@@ -35,6 +34,8 @@ export class AddLedgerEntry extends React.Component {
 		this.amountTypeInput.value = '';
 		
 		this.props.dispatch(postBudget(ledgerEntry));
+		this.props.dispatch(fetchBoard());
+		this.props.dispatch(updateSummaries(this.props.ledger));
 	}
 
 	setEditing(editing) {
@@ -104,7 +105,8 @@ export class AddLedgerEntry extends React.Component {
 }
 
 const mapStateToProps = state => ({
-	ledger: state.budget.ledgerEntries
+	ledger: state.budget.ledgerEntries,
+	user: state.auth.currentUser.username
 })
 
 export default connect(mapStateToProps)(AddLedgerEntry);
