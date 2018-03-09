@@ -40,7 +40,7 @@ export const updateSummaries = (ledger) => {
 
 	for (let i=0; i<ledger.length; i++) {
 		if (ledger[i].month !== currentMonth) {
-			monthlyBudget.endingBalance = monthlyBudget.startingBalance = monthlyBudget.income + monthlyBudget.expenses;
+			monthlyBudget.endingBalance = monthlyBudget.startingBalance + monthlyBudget.income + monthlyBudget.expenses;
 			summary.push(monthlyBudget);
 			endingBalance = monthlyBudget.endingBalance;
 			monthlyBudget = createMonthly();
@@ -55,6 +55,8 @@ export const updateSummaries = (ledger) => {
 		  monthlyBudget.expenses += ledger[i].amount;
 		}
 		monthlyBudget.endingBalance += ledger[i].amount;
+		console.log(`ending: ${monthlyBudget.endingBalance}`)
+		console.log(typeof(monthlyBudget.endingBalance))
 	}
 	summary.push(monthlyBudget);
 
