@@ -8,7 +8,8 @@ export const addLedgerEntry = (ledgerEntry) => ({
 
 export const UPDATE_SUMMARIES = 'UPDATE_SUMMARIES';
 export const updateSummaries = (ledger) => {
-	//compute summary
+
+	console.log(ledger);
 
 	let createMonthly = () => {
 		let monthly = {}
@@ -112,7 +113,7 @@ export const postBudget = (ledgerEntry) => (dispatch, getState) => {
 		},
 		body: JSON.stringify(ledgerEntry),
 		success: function(data) {
-			console.log(data);
+			console.log(`POST succeeded: ${data}`);
 		}
 	})
 }

@@ -22,7 +22,7 @@ export class AddLedgerEntry extends React.Component {
 		ledgerEntry.year = this.yearInput.value;
 		ledgerEntry.amount = this.amountInput.value;
 		ledgerEntry.label = this.labelInput.value;
-		ledgerEntry.type = this.type.value;
+		ledgerEntry.amountType = this.amountTypeInput.value;
 		
 		this.props.dispatch(addLedgerEntry(ledgerEntry));
 		this.props.dispatch(updateSummaries(this.props.ledger));
@@ -32,7 +32,7 @@ export class AddLedgerEntry extends React.Component {
 		this.yearInput.value = '';
 		this.amountInput.value = 0;
 		this.labelInput.value = '';
-		this.type.value = '';
+		this.amountTypeInput.value = '';
 		
 		this.props.dispatch(postBudget(ledgerEntry));
 	}
@@ -48,7 +48,7 @@ export class AddLedgerEntry extends React.Component {
 			return (
 				<div className="add-button"
 				onClick={() => this.setEditing(true)}>
-					<button href="#addLedgerEntry">Add {this.props.type}</button>
+					<button href="#addLedgerEntry">Add</button>
 				</div>
 			)
 		}
@@ -62,29 +62,37 @@ export class AddLedgerEntry extends React.Component {
 					<label htmlFor="day" hidden>day</label>
 					<input type="number" min="1" max="31" name="day" id="day" ref={input => this.dayInput=input} placeholder="day"/>
 					<label htmlFor="year" hidden>year</label>
-					<input type="number" min="2018" name="year" id="year" ref={input => this.yearInput=input} placeholder="year"/>
+					<input type="number" min="2018" name="year" id="year" ref={input => this.yearInput=input} placeholder="year"/>				
 					<label htmlFor="amount" hidden>Amount</label>
 					<input type="number" name="amount" id="amount" ref={input => this.amountInput=input} placeholder="Amount"/>
 					<label htmlFor="label" hidden>Item Label</label>
 					<input type="text" name="label" id="label" ref={input => this.labelInput=input} placeholder="Label"/>
+					
 					<div className="paymentType">
 						<h4 className="income">Income</h4>
-						<input type="radio" name="income" id="paycheck" ref={input => this.type=input} value="Paycheck"/>
+						<input type="radio" name="income" id="paycheck" ref={input => this.amountTypeInput=input} value="Paycheck"/>
 						<label htmlFor="paycheck">Paycheck</label>
-						<input type="radio" name="income" id="addOther" ref={input => this.type=input} value="Other"/>
+						
+						<input type="radio" name="income" id="addOther" ref={input => this.amountTypeInput=input} value="Other"/>
 						<label htmlFor="addOther">Other</label>
+						
 						<h4 className="payment">Payment</h4>
-						<input type="radio" name="expense" id="creditCard" ref={input => this.type=input} value="Credit Card"/>
+						<input type="radio" name="expense" id="creditCard" ref={input => this.amountTypeInput=input} value="Credit Card"/>
 						<label htmlFor="creditCard">Credit Card</label>
-						<input type="radio" name="expense" id="savings" ref={input => this.type=input} value="Savings"/>
+						
+						<input type="radio" name="expense" id="savings" ref={input => this.amountTypeInput=input} value="Savings"/>
 						<label htmlFor="savings">Savings</label>
-						<input type="radio" name="expense" id="loan" ref={input => this.type=input} value="Loan"/>
+						
+						<input type="radio" name="expense" id="loan" ref={input => this.amountTypeInput=input} value="Loan"/>
 						<label htmlFor="loan">Loan</label>
-						<input type="radio" name="expense" id="utility" ref={input => this.type=input} value="Utility"/>
+						
+						<input type="radio" name="expense" id="utility" ref={input => this.amountTypeInput=input} value="Utility"/>
 						<label htmlFor="utility">Utility</label>
-						<input type="radio" name="expense" id="personal" ref={input => this.type=input} value="Personal"/>
+						
+						<input type="radio" name="expense" id="personal" ref={input => this.amountTypeInput=input} value="Personal"/>
 						<label htmlFor="personal">Personal</label>
-						<input type="radio" name="expense" id="minusOther" ref={input => this.type=input} value="Other"/>
+						
+						<input type="radio" name="expense" id="minusOther" ref={input => this.amountTypeInput=input} value="Other"/>
 						<label htmlFor="minusOther">Other</label>
 					</div>
 					<button type="submit">Add</button>

@@ -11,7 +11,7 @@ const initialState = {
 		year: null,
 		amount: null,
 		label: null,
-		type: null,
+		amountType: null,
 		category: null
 	}
 }
