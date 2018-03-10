@@ -1,7 +1,7 @@
 import React from 'react';
 import './addLedgerEntry.css';
 import {connect} from 'react-redux';
-import {updateSummaries, fetchBoard, postBudget} from './../../actions/budgetActions'
+import {postBudget} from './../../actions/budgetActions'
 
 export class AddLedgerEntry extends React.Component {
 	constructor(props) {
@@ -23,9 +23,6 @@ export class AddLedgerEntry extends React.Component {
 		ledgerEntry.label = this.labelInput.value;
 		ledgerEntry.amountType = this.amountTypeInput.value;
 		
-		// this.props.dispatch(addLedgerEntry(ledgerEntry));
-		
-
 		this.monthInput.value = '';
 		this.dayInput.value = '';
 		this.yearInput.value = '';
@@ -34,8 +31,6 @@ export class AddLedgerEntry extends React.Component {
 		this.amountTypeInput.value = '';
 		
 		this.props.dispatch(postBudget(ledgerEntry));
-		this.props.dispatch(fetchBoard());
-		this.props.dispatch(updateSummaries(this.props.ledger));
 	}
 
 	setEditing(editing) {

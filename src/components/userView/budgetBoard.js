@@ -6,7 +6,7 @@ import {fetchBoard} from '../../actions/budgetActions'
 import './budgetBoard.css';
 
 export class BudgetBoard extends React.Component {
-	componentDidMount() {
+	componentWillMount() {
 		this.props.dispatch(fetchBoard(this.props.user));
 	}
 
@@ -16,13 +16,12 @@ export class BudgetBoard extends React.Component {
 				<h2>My Budgets</h2>
 				<ul>
 					<BudgetCard />
-					<BudgetDetails />
+					<BudgetDetails />				
 				</ul>
 			</div>
 		)
 	}
 }
-
 
 const mapStateToProps = state => ({
 	user: state.auth.currentUser.username
