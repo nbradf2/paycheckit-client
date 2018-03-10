@@ -2,16 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import BudgetLedgerEntry from './budgetLedgerEntry';
 import AddLedgerEntry from './addLedgerEntry';
-import {updateSummaries} from './../../actions/budgetActions';
 import './budgetCard.css';
 
-// shows individual ledger entries by month
 export class BudgetDetails extends React.Component {
-	componentWillMount() {
-		this.props.dispatch(updateSummaries(this.props.ledgerEntries));
-	}
 
 	render() {
+		console.log("details ledger: " + this.props.ledgerEntries)
 		const ledgerEntries = this.props.ledgerEntries.map((ledgerEntry, index) => {
 			return (
 				<BudgetLedgerEntry key={index} {...ledgerEntry} />

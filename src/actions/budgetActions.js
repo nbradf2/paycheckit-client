@@ -9,8 +9,6 @@ export const addLedgerEntry = (ledgerEntry) => ({
 export const UPDATE_SUMMARIES = 'UPDATE_SUMMARIES';
 export const updateSummaries = (ledger) => {
 
-	console.log(ledger);
-
 	let createMonthly = () => {
 		let monthly = {}
 	    monthly.startingBalance = 0;
@@ -62,7 +60,6 @@ export const updateSummaries = (ledger) => {
 		type: UPDATE_SUMMARIES, 
 		summary
 	})
-
 }
 
 export const FETCH_BOARD_SUCCESS = 'FETCH_BOARD_SUCCESS';
@@ -105,16 +102,14 @@ export const getBudget = () => (dispatch, getState) => {
 
 export const postBudget = (ledgerEntry) => (dispatch, getState) => {
 	const authToken = getState().auth.authToken;
+	const user = getState().auth.currentUser.username;
 	fetch(`${API_BASE_URL}/budget`, {
 		method: 'POST',
 		headers: {
 			Authorization: `Bearer ${authToken}`,
 			'Content-Type': 'application/json'			
 		},
-		body: JSON.stringify(ledgerEntry),
-		success: function(data) {
-			console.log(`POST succeeded: ${data}`);
-		}
+		body: JSON.stringify(ledgerEntry)
 	})
 	.then(res => {
 		if(!res.ok) {
@@ -122,9 +117,9 @@ export const postBudget = (ledgerEntry) => (dispatch, getState) => {
 		}
 		return res.json();
 	})
-	.then(budget => {
-		console.log(`budget is: ${budget}`)
-		dispatch(fetchBoardSuccess(budget));
+	.then(entry => {
+		console.log(`entry is: ${entry._id}`)
+		dispatch(fetchBoard(user));
 	});
 }
 
