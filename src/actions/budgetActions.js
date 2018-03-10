@@ -55,8 +55,6 @@ export const updateSummaries = (ledger) => {
 		  monthlyBudget.expenses += ledger[i].amount;
 		}
 		monthlyBudget.endingBalance += ledger[i].amount;
-		console.log(`ending: ${monthlyBudget.endingBalance}`)
-		console.log(typeof(monthlyBudget.endingBalance))
 	}
 	summary.push(monthlyBudget);
 
@@ -125,6 +123,7 @@ export const postBudget = (ledgerEntry) => (dispatch, getState) => {
 		return res.json();
 	})
 	.then(budget => {
+		console.log(`budget is: ${budget}`)
 		dispatch(fetchBoardSuccess(budget));
 	});
 }

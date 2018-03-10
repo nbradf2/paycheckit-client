@@ -1,7 +1,7 @@
 import React from 'react';
 import './addLedgerEntry.css';
 import {connect} from 'react-redux';
-import {addLedgerEntry, updateSummaries, fetchBoard, postBudget} from './../../actions/budgetActions'
+import {updateSummaries, fetchBoard, postBudget} from './../../actions/budgetActions'
 
 export class AddLedgerEntry extends React.Component {
 	constructor(props) {
