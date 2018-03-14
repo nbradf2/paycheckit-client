@@ -53,6 +53,7 @@ export const updateSummaries = (ledger) => {
 		}
 		monthlyBudget.endingBalance += ledger[i].amount;
 	}
+	monthlyBudget.endingBalance += monthlyBudget.startingBalance;
 	summary.push(monthlyBudget);
 
 	return ({
@@ -83,6 +84,7 @@ export const fetchBoard = (user) => (dispatch, getState) => {
 	})
 	.then(budget => {
 		dispatch(fetchBoardSuccess(budget));
+		dispatch(updateSummaries(budget));
 	});
 };
 

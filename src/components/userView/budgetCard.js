@@ -5,9 +5,9 @@ import {updateSummaries} from './../../actions/budgetActions'
 import './budgetCard.css';
 
 export class BudgetCard extends React.Component {
-	componentDidMount() {
-		this.props.dispatch(updateSummaries(this.props.ledgerEntries));
-	}
+	// componentDidMount() {
+	// 	this.props.dispatch(updateSummaries(this.props.ledgerEntries));
+	// }
 
 	render() {
 		console.log("card ledger: " + this.props.ledgerEntries)
@@ -32,5 +32,5 @@ const mapStateToProps = state => ({
 	ledgerEntries: state.budget.ledgerEntries,
 	monthlySummaries: state.budget.monthlySummaries
 })
-
+    
 export default connect(mapStateToProps)(BudgetCard);

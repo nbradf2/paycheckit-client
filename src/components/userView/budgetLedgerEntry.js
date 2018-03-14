@@ -24,4 +24,4 @@ BudgetLedgerEntry.defaultProps = {
 }
 
 
-//connect to redux to dispatch the delete action
+//connect to redux to dispatch the delete action        
