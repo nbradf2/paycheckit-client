@@ -14,7 +14,6 @@ export const updateSummaries = (ledger) => {
 	    monthly.startingBalance = 0;
 	    monthly.month = 0;
 	    monthly.year = 0;
-	    monthly.startingBalance = 0;
 	    monthly.income = 0;
 	    monthly.expenses = 0;
 	    monthly.endingBalance = 0;
@@ -121,5 +120,28 @@ export const postBudget = (ledgerEntry) => (dispatch, getState) => {
 		console.log(`entry is: ${entry._id}`)
 		dispatch(fetchBoard(user));
 	});
+}
+
+export const deleteBudget = (ledgerEntry) => (dispatch, getState) => {
+	const authToken = getState().auth.authToken;
+	const user = getState().auth.currentUser.username;
+	const id = getState().ledgerEntry.id;
+	fetch(`${API_BASE_URL}/budget/${id}`, {
+		method: 'DELETE',
+		headers: {
+			Authorization: `Bearer ${authToken}`,
+			'Content-Type': 'application/json'			
+		},
+	})
+	.then(res => {
+		if(!res.ok) {
+			return Promise.reject(res.statusText);
+		}
+		return res.json()
+	})
+	.then(entry => {
+		console.log(`deleted: ${entry._id}`)
+		dispatch(fetchBoard(user));
+	})
 }
 

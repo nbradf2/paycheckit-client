@@ -1,4 +1,5 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import './budgetLedgerEntry.css';
 
 export default function BudgetLedgerEntry(props) {
@@ -23,3 +24,4 @@ BudgetLedgerEntry.defaultProps = {
 }
 
 
+//connect to redux to dispatch the delete action
