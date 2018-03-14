@@ -10,7 +10,7 @@ export class BudgetDetails extends React.Component {
 		console.log("details ledger: " + this.props.ledgerEntries)
 		const ledgerEntries = this.props.ledgerEntries.map((ledgerEntry, index) => {
 			return (
-				<BudgetLedgerEntry key={index} {...ledgerEntry} />
+				<BudgetLedgerEntry entryId={ledgerEntry._id} key={index} {...ledgerEntry} />
 			)
 		})
 

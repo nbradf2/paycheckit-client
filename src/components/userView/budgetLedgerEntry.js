@@ -1,27 +1,25 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {deleteItem} from './../../actions/budgetActions'
 import './budgetLedgerEntry.css';
 
-export default function BudgetLedgerEntry(props) {
-	return (
-		<div className="line">
-			<p><span><input type="checkbox" /></span>{props.month}/{props.day}/{props.year}</p>
-			<p>{props.amount}</p>
-			<p>{props.label}</p>
-			<p><a href="#addLedgerEntry"><i className="fa fa-pencil"></i></a></p>
-			<p><i className="fa fa-trash"></i></p>
-		</div>
-	)
+export class BudgetLedgerEntry extends React.Component {
+	deleteItem(id) {
+		this.props.dispatch(deleteItem(id))
+	}
+
+	render() {
+		return (
+			<div className="line">
+				<p><span><input type="checkbox" /></span>{this.props.month}/{this.props.day}/{this.props.year}</p>
+				<p>{this.props.amount}</p>
+				<p>{this.props.label}</p>
+				<p><a href="#addLedgerEntry"><i className="fa fa-pencil"></i></a></p>
+				<p onClick={() => this.deleteItem(this.props.entryId)}><i className="fa fa-trash"></i></p>
+			</div>
+		)
+	}
+	
 }
 
-BudgetLedgerEntry.defaultProps = {
-	id: '',
-	month: 2,
-	day: 25,
-	year: 2018,
-	amount: 75,
-	label: 'MasterCard',
-}
-
-
-//connect to redux to dispatch the delete action        
+export default connect()(BudgetLedgerEntry);     

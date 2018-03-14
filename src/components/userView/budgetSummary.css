@@ -1,0 +1,13 @@
+.summary {
+	display: inline-block;
+	width: 25%;
+	background-color: white;
+	color: black;
+	padding: 10px;
+	border: solid 2px black;
+	margin: 10px;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+
+@media only screen and (max-width: )

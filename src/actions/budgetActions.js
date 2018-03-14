@@ -124,10 +124,9 @@ export const postBudget = (ledgerEntry) => (dispatch, getState) => {
 	});
 }
 
-export const deleteBudget = (ledgerEntry) => (dispatch, getState) => {
+export const deleteItem = (id) => (dispatch, getState) => {
 	const authToken = getState().auth.authToken;
 	const user = getState().auth.currentUser.username;
-	const id = getState().ledgerEntry.id;
 	fetch(`${API_BASE_URL}/budget/${id}`, {
 		method: 'DELETE',
 		headers: {
@@ -139,10 +138,9 @@ export const deleteBudget = (ledgerEntry) => (dispatch, getState) => {
 		if(!res.ok) {
 			return Promise.reject(res.statusText);
 		}
-		return res.json()
+		// return res.json()
 	})
 	.then(entry => {
-		console.log(`deleted: ${entry._id}`)
 		dispatch(fetchBoard(user));
 	})
 }
