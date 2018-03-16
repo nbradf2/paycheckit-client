@@ -1,3 +1,7 @@
+.line {
+	display: block;
+}
+
 .line p {
 	display: inline;
 	margin-right: .5rem;
@@ -7,4 +11,8 @@
 	margin-right: 0.5rem;
 	height: 1rem;
 	width: 1rem;
+}
+
+.isChecked {
+	text-decoration: line-through;
 }

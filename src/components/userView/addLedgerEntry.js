@@ -31,6 +31,7 @@ export class AddLedgerEntry extends React.Component {
 		this.amountTypeInput.value = '';
 		
 		this.props.dispatch(postBudget(ledgerEntry));
+		this.setEditing(false);
 	}
 
 	setEditing(editing) {

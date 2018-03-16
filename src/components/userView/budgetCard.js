@@ -1,13 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import BudgetSummary from './budgetSummary';
-import {updateSummaries} from './../../actions/budgetActions'
 import './budgetCard.css';
 
 export class BudgetCard extends React.Component {
-	// componentDidMount() {
-	// 	this.props.dispatch(updateSummaries(this.props.ledgerEntries));
-	// }
 
 	render() {
 		console.log("card ledger: " + this.props.ledgerEntries)
@@ -18,7 +14,7 @@ export class BudgetCard extends React.Component {
 		})
 
 		return (
-			<div>
+			<div className="budgetCard">
 				<h3>My Budget Summaries</h3>
 				<div>
 					{monthlySummaries}

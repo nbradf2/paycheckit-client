@@ -14,10 +14,10 @@ export class BudgetBoard extends React.Component {
 		return (
 			<div className="budgetBoard">
 				<h2>My Budgets</h2>
-				<ul>
-					<BudgetCard />
-					<BudgetDetails />				
-				</ul>
+				<div>
+					<BudgetCard />				
+					<BudgetDetails />
+				</div>
 			</div>
 		)
 	}

@@ -1,5 +1,9 @@
 .summary {
-	display: inline-block;
+	background-color: #F6F6FA;
+	color: #21434B;
+	margin: 0.5rem;
+	border-radius: 5px;
+	/*display: inline-block;
 	width: 25%;
 	background-color: white;
 	color: black;
@@ -7,7 +11,7 @@
 	border: solid 2px black;
 	margin: 10px;
 	border-radius: 10px;
-	box-sizing: border-box;
+	box-sizing: border-box;*/
 }
 
-@media only screen and (max-width: )
+/*@media only screen and (max-width: )*/

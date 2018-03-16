@@ -4,6 +4,11 @@ import {deleteItem} from './../../actions/budgetActions'
 import './budgetLedgerEntry.css';
 
 export class BudgetLedgerEntry extends React.Component {
+	constructor() {
+		super();
+		this.state = { checked: false};
+	}
+
 	deleteItem(id) {
 		this.props.dispatch(deleteItem(id))
 	}
@@ -12,9 +17,9 @@ export class BudgetLedgerEntry extends React.Component {
 		return (
 			<div className="line">
 				<p><span><input type="checkbox" /></span>{this.props.month}/{this.props.day}/{this.props.year}</p>
-				<p>{this.props.amount}</p>
+				<p>${this.props.amount}</p>
 				<p>{this.props.label}</p>
-				<p><a href="#addLedgerEntry"><i className="fa fa-pencil"></i></a></p>
+				{/*<p><a href="#addLedgerEntry"><i className="fa fa-pencil"></i></a></p>*/}
 				<p onClick={() => this.deleteItem(this.props.entryId)}><i className="fa fa-trash"></i></p>
 			</div>
 		)
