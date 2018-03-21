@@ -15,7 +15,7 @@ export class BudgetDetails extends React.Component {
 		})
 
 		return (
-			<div className="budgetDetails">
+			<div className="budgetDetails row">
 				<h3>My Budget Entries</h3>
 				<div className="hi">
 					{ledgerEntries}	
