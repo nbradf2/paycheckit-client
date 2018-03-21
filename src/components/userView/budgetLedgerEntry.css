@@ -1,5 +1,5 @@
 .line {
-	display: block;
+	display: inline-block;
 }
 
 .line p {

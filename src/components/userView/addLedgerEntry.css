@@ -5,13 +5,23 @@
 	border-radius: 3px;
 }
 
-#addLedgerEntry {
+.modalBackground {
 	text-align: center;
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 3rem;
+}
+
+.modalForm {
 	background-color: #F6F6FA;
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+	padding: 3rem;
 	color: #21434B;
 }
 
@@ -20,7 +30,6 @@
 	color: #21434B;
 	font-family: 'Lato', sans-serif; 
 	height: 4rem;
-	/*width: 100%;*/
 	border: none;
 	border-bottom: 1px solid #21434B;
 	padding-top: 1.5rem;

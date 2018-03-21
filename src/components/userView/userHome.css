@@ -1,7 +1,8 @@
 .userHome {
-	min-height: 100vh;
+	height: 100vh;
 	margin-top: 5rem;
 	padding-top: 5rem;
+	padding-left: 1rem;
 	padding-bottom: 1rem;
 	background-color: #21434B;
 	color: #F6F6FA;
@@ -11,7 +12,7 @@
 	text-align: center;
 }
 
-.userHome .userHello {
+.userHello {
 	margin: 1rem;
 }
 

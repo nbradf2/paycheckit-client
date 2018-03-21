@@ -51,8 +51,8 @@ export class AddLedgerEntry extends React.Component {
 		}
 
 		return (
-			<form id="addLedgerEntry" className="row" onSubmit={this.onSubmit}>
-				<div className="col-12">
+			<form id="addLedgerEntry" className="row modalBackground" onSubmit={this.onSubmit}>
+				<div className="modalForm">
 					<h2>Add Item</h2>
 					<label htmlFor="month" hidden>Month</label>
 					<input type="number" min="1" max="12" name="month" id="month" ref={input => this.monthInput=input} placeholder="month"/>

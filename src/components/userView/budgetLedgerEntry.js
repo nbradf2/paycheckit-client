@@ -4,8 +4,8 @@ import {deleteItem} from './../../actions/budgetActions'
 import './budgetLedgerEntry.css';
 
 export class BudgetLedgerEntry extends React.Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = { checked: false};
 	}
 
