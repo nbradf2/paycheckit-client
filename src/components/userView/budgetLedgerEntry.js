@@ -19,7 +19,6 @@ export class BudgetLedgerEntry extends React.Component {
 				<p><span><input type="checkbox" /></span>{this.props.month}/{this.props.day}/{this.props.year}</p>
 				<p>${this.props.amount}</p>
 				<p>{this.props.label}</p>
-				{/*<p><a href="#addLedgerEntry"><i className="fa fa-pencil"></i></a></p>*/}
 				<p onClick={() => this.deleteItem(this.props.entryId)}><i className="fa fa-trash"></i></p>
 			</div>
 		)
