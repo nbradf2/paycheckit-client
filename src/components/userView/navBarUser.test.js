@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 
-import NavBarUser from './navBarUser';
+import {NavBarUser} from './navBarUser';
 
 describe('<NavBarUser />', () => {
 	let links=['My Budget', 'Add Budget']
