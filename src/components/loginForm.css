@@ -52,6 +52,19 @@
 	margin: 1rem auto;
 }
 
+.demo {
+	background-color: #F6F6FA;
+	color: #21434B;
+	font-weight: bold;
+	line-height: 1rem;
+	padding: 1rem;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 2rem;
+	text-align: center;
+	border-radius: 3px;
+}
+
 @media only screen and (max-width: 843px) {
 	#loginForm {
 		margin-top: 10rem;

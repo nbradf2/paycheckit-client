@@ -56,6 +56,11 @@ class LoginFormComponent extends React.Component {
 				</div>
 				<button disabled={this.props.pristine || this.props.submitting}>Log in</button>
 				<p>Not a registered user?  Click <Link to='/registrationPage'>here</Link>!</p>
+				<div className="demo">
+					<p>Try it out!</p>
+					<p className="demoUser">Username: demo</p>
+					<p className="demoUser">Password: testertester</p>
+				</div>
 			</form>
 		)
 	}
