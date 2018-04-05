@@ -1,46 +1,72 @@
-<h1>PaycheckIt</h1>
+<h1>Paycheck Planner</h1>
 
-// should have detailed view of items there
+<p><a href="https://www.thinkful.com/">Thinkful</a> Node Capstone Project - Full stack capstone app integrating FEWD with <a href="https://nodejs.org/en/">Node.js</a> server-side development/CRUD operations and <a href="https://reactjs.org"></a></p>
 
-// which are initially empty
+![landing page](https://github.com/nbradf2/garden-planner-capstone/blob/master/public/images/landing-page.png)
 
-// might be pre=populated with the remainder from previous month
+![login page](https://github.com/nbradf2/garden-planner-capstone/blob/master/public/images/login.png)
 
-// most current is the front
+![register page](https://github.com/nbradf2/garden-planner-capstone/blob/master/public/images/register.png)
 
-// when we add an item, puts an 'enter item component' 
+![home page](https://github.com/nbradf2/garden-planner-capstone/blob/master/public/images/home-screen.png)
 
-// each list item should have edit and delete icon
+![add screen page](https://github.com/nbradf2/garden-planner-capstone/blob/master/public/images/add-screen.png)
 
-// that brings up form - will dispatch put request to edit
+![update page](https://github.com/nbradf2/garden-planner-capstone/blob/master/public/images/update.png)
 
-// BUDGETFULLVIEW
+<h2>Use Case</h2>
+<p>This app helps users plan and keep track of their garden.</p>
 
-// current budget will be a state, property
-// is an object with array of income and expenses
-// if no records, will only see headers and add button
-// set up construct of consistent line items that can carry 
-// over to new budget
-// each line item is a component
+<h2>Functionality</h2>
+<p>This app's functionality includes:</p>
+<ul>
+	<li>Add a plant with start date, harvest date, and a comment</li>
+	<li>Add a journal entry</li>
+	<li>Display a user's plant and journal information</li>
+	<li>Update a user's plant and journal information</li>
+	<li>Delete a user's plant and journal information</li>
+</ul>
 
-// Form with just:
-// date
-// Starting balance, 
-// header sections for income/expenses
-	// will have add buttons
-	// will be line item components here if carrying over
-		// with add and edit icons
-// Remaining balance
+<h2>Technology</h2>
+<h3>Front End</h3>
+<ul>
+	<li>HTML</li>
+	<li>CSS</li>
+	<li>JavaScript</li>
+	<li>jQuery</li>
+	<li>AJAX JSON calls to the app's API</li>
+</ul>
 
-// Think of actions as -add a record -add a record 'success' -add a record 'failure'
-// Look at dispatch sequence of events in React JWT Auth code (in authorization section)
+<h3>Back End</h3>
+<ul>
+	<li>Node.js</li>
+	<li>Express</li>
+	<li>Mocha</li>
+	<li>Chai</li>
+	<li>Mongo</li>
+	<li>Mongoose</li>
+	<li>bcryptjs</li>
+	<li>Passport</li>
+</ul>
 
-// will still have mock data, but move it from the component to the reducer
+<h3>Programs</h3>
+<ul>
+	<li>Heroku</li>
+	<li>TravisCI</li>
+	<li>mLab</li>
+</ul>
 
-// for Mongo - will have individual line items, and will query date 
-// range date amount label type
-// logic: take all records in db and add/subtract accordingly
-// reducer for budget
-// reducer for authentication
-// budget will have some context of all monthly records
-// budget will have some contect of the current budget
+<h2>Working Prototype</h2>
+<p>A working prototype of this app can be viewed at <a href="https://pacific-everglades-69820.herokuapp.com">https://pacific-everglades-69820.herokuapp.com</a></p>
+
+<h2>Responsive Design</h2>
+<p>This app is built to be responsive across mobile, tablet, laptop, and desktop screens.</p>
+
+<h2>Development</h2>
+<p>Future updates are expected to include:</p>
+<ul>
+	<li>Add third-party API to get user's growing zone</li>
+	<li>Add diagram for garden layouts</li>
+</ul>
+
+
