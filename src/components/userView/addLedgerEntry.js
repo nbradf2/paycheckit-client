@@ -61,7 +61,7 @@ export class AddLedgerEntry extends React.Component {
 					<label htmlFor="year" hidden>year</label>
 					<input type="number" min="2018" name="year" id="year" ref={input => this.yearInput=input} placeholder="year"/>				
 					<label htmlFor="amount" hidden>Amount</label>
-					<input type="number" name="amount" id="amount" ref={input => this.amountInput=input} placeholder="Amount"/>
+					<input type="number" step="0.01" name="amount" id="amount" ref={input => this.amountInput=input} placeholder="Amount"/>
 					<label htmlFor="label" hidden>Item Label</label>
 					<input type="text" name="label" id="label" ref={input => this.labelInput=input} placeholder="Label"/>
 					
