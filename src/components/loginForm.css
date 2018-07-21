@@ -1,5 +1,5 @@
 #loginForm {
-	background-color: #21434B;
+	background-color: #35545B;
 	color: #F6F6FA;
 	text-align: center;
 	margin-top: 5rem;
@@ -22,7 +22,7 @@
 #loginForm input {
 	font-family: 'Lato', sans-serif; 
 	height: 4rem;
-	background-color: #21434B;
+	background-color: #35545B;
 	width: 100%;
 	border: none;
 	border-bottom: 1px solid #F6F6FA;

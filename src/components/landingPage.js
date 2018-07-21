@@ -8,7 +8,7 @@ import LoginForm from './loginForm';
 import RegistrationPage from './registration-page';
 import UserHome from './userView/userHome';
 // import {refreshAuthToken} from '../actions/auth';
-import './landingPage.css';
+// import './landingPage.css';
 
 export function LandingPage(props) {
 	if (props.loggedIn) {

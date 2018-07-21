@@ -1,5 +1,5 @@
 #registerForm {
-	background-color: #21434B;
+	background-color: #35545B;
 	color: #F6F6FA;
 	text-align: center;
 	margin-top: 5rem;
@@ -22,7 +22,7 @@
 #registerForm input {
 	font-family: 'Lato', sans-serif; 
 	height: 4rem;
-	background-color: #21434B;
+	background-color: #35545B;
 	width: 100%;
 	border: none;
 	border-bottom: 1px solid #F6F6FA;
@@ -43,7 +43,7 @@
 	height: 3rem;
 	color: #21434B;
 	background-color: #F6F6FA;
-	border: 1px solid #21434B;
+	border: 1px solid #35545B;
 	width: 15rem;
 }
 
